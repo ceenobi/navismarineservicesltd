@@ -1,5 +1,13 @@
 # Navis Marine Services Ltd
 
+[![License: All Rights Reserved](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/Node-24.x-339933?logo=node.js&logoColor=white)](package.json)
+[![React Router](https://img.shields.io/badge/React%20Router-8-black)](https://reactrouter.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?logo=vercel&logoColor=white)](https://navismarineservicesltd.com)
+[![CI](https://img.shields.io/github/actions/workflow/status/ceenobi/navismarineservicesltd/ci.yml?label=CI)](https://github.com/ceenobi/navismarineservicesltd/actions)
+
 Official website for **Navis Marine Services Ltd** — Ship Agency, Marine Consultancy, HSSEQ, Marine Procurement and Integrated Maritime Solutions for shipowners, operators, charterers and offshore industries.
 
 Built with [React Router 7+ (Framework Mode)](https://reactrouter.com/), TypeScript, Tailwind CSS 4 and GSAP.
@@ -116,6 +124,14 @@ Make sure to deploy the output of `yarn build`:
 ## Styling
 
 Tailwind CSS 4 is configured via `@tailwindcss/vite`. Custom theme tokens (fonts, colors) live in `app/app.css`.
+
+## License
+
+All Rights Reserved — © 2026 Navis Marine Services Ltd. This repository is proprietary; see [LICENSE](LICENSE) for full terms. For licensing inquiries, contact info@navismarineservicesltd.com.
+
+## Contributing & Security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). All contributors are expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
