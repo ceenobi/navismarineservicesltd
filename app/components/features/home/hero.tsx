@@ -3,15 +3,22 @@ import { Link } from "react-router";
 import { gsap, useGSAP } from "~/lib/gsap";
 import { Button } from "~/components/ui/button";
 
-const VIDEO_HLS =
-  "https://res.cloudinary.com/ceenobi/video/upload/sp_auto/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.m3u8";
 const VIDEO_MP4 =
   "https://res.cloudinary.com/ceenobi/video/upload/q_auto,w_1280/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.mp4";
 const POSTER_IMAGE =
   "https://res.cloudinary.com/ceenobi/image/upload/q_auto,f_auto,w_1920/v1786799802/clientproject/navis/hero1_x2p0sz.jpg";
 
 function HeroBackground() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
+
+  const startPlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.play().catch(() => {
+      setVideoFailed(true);
+    });
+  };
 
   return (
     <>
@@ -27,6 +34,7 @@ function HeroBackground() {
       />
       {!videoFailed && (
         <video
+          ref={videoRef}
           data-hero="bg"
           aria-hidden="true"
           className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
@@ -34,13 +42,13 @@ function HeroBackground() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           disablePictureInPicture
           controlsList="nodownload noremoteplayback"
           poster={POSTER_IMAGE}
+          onCanPlay={startPlayback}
           onError={() => setVideoFailed(true)}
         >
-          <source src={VIDEO_HLS} type="application/x-mpegURL" />
           <source src={VIDEO_MP4} type="video/mp4" />
         </video>
       )}
