@@ -1,20 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import { gsap, useGSAP } from "~/lib/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
-gsap.registerPlugin(useGSAP);
-
-let scrollTriggerReady: Promise<void> | null = null;
-
-async function ensureScrollTrigger(): Promise<void> {
-  if (typeof window === "undefined") return;
-  if (!scrollTriggerReady) {
-    scrollTriggerReady = import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-      gsap.registerPlugin(ScrollTrigger);
-    });
-  }
-  await scrollTriggerReady;
-}
+gsap.registerPlugin(ScrollTrigger);
 
 const MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 
@@ -54,7 +42,7 @@ export function useReveal(
     () => {
       const mm = gsap.matchMedia();
 
-      void ensureScrollTrigger().then(() => mm.add(MOTION_QUERY, () => {
+      mm.add(MOTION_QUERY, () => {
         const targets = gsap.utils.toArray(target) as HTMLElement[];
 
         const perElFrom = (): gsap.TweenVars => {
@@ -116,7 +104,8 @@ export function useReveal(
             });
           });
         }
-      }));
+      });
+
       return () => mm.revert();
     },
     { scope: scopeRef, dependencies: [stagger, duration, delay, y, scale, scrub, start, toggleActions] }
@@ -132,10 +121,6 @@ export function useSplitWords(
     if (!scope || !prefersMotion()) return;
 
     const headings = gsap.utils.toArray<HTMLElement>(selector, scope);
-    let cancelled = false;
-
-    void ensureScrollTrigger().then(() => {
-      if (cancelled) return;
 
     interface WordToken {
       word: string;
@@ -205,10 +190,8 @@ export function useSplitWords(
         scrollTrigger: { trigger: heading, start: "top 85%" },
       });
     });
-    });
 
     return () => {
-      cancelled = true;
       headings.forEach((heading) => {
         const label = heading.getAttribute("aria-label");
         if (label) {
@@ -227,7 +210,7 @@ export function useCountUp(
   useGSAP(
     () => {
       const mm = gsap.matchMedia();
-      void ensureScrollTrigger().then(() => mm.add(MOTION_QUERY, () => {
+      mm.add(MOTION_QUERY, () => {
         const nums = gsap.utils.toArray<HTMLElement>(selector);
         nums.forEach((el) => {
           const raw = el.dataset.count ?? el.textContent ?? "";
@@ -262,7 +245,7 @@ export function useCountUp(
             });
           }
         });
-      }));
+      });
       return () => mm.revert();
     },
     { scope: scopeRef }
