@@ -2,10 +2,11 @@
   "name": "navis",
   "private": true,
   "type": "module",
+  "packageManager": "yarn@4.16.0",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
+    "start": "react-router-serve \"$(find ./build/server -name index.js | head -n 1)\"",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {

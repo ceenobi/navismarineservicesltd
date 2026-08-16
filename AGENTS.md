@@ -43,8 +43,6 @@ yarn install
 # Start the development server with HMR
 yarn dev
 
-# Run QStash local development CLI
-yarn qstash
 ```
 
 ### Production

@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+    branches: [test, main]
+  pull_request:
+    branches: [test, main]
+
+env:
+  NODE_VERSION: '24'
+
+jobs:
+  ci:
+    name: Typecheck & Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable Corepack (Yarn 4)
+        run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+      - name: Install dependencies
+        run: yarn install
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: 'false'
+      - name: Typecheck
+        run: yarn typecheck
+      - name: Build
+        run: yarn build
