@@ -2,6 +2,13 @@
 
 ## Recent Accomplishments
 
+### Repository licensing, documentation & insights (completed)
+- **README rewritten** (`README.md`) to reflect the actual project: Navis Marine Services Ltd description, feature list (SSR + prerender, Brevo contact form, GSAP, SEO), Yarn 4 install/dev/build/start/typecheck commands, `BREVO_API_KEY` env table, Vercel (primary) + Docker deployment, and the `test` → `main` git workflow. Added `.env.example` (was referenced but missing).
+- **LICENSE (All Rights Reserved):** Added a proprietary license file for Navis Marine Services Ltd — viewing for reference only; no reproduction/distribution/reuse without written consent. GitHub now detects a license on the repo (`Other` / `NOASSERTION`). README carries an "All Rights Reserved" badge + license section.
+- **Community health files** (feed the Insights → Community Standards tab): `SECURITY.md` (private vulnerability reporting via info@), `CONTRIBUTING.md` (setup, git workflow, coding standards per AGENTS.md, licensing note), `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1).
+- **README badges:** License, Node 24.x, React Router 8, TypeScript strict, Tailwind 4, Vercel-deployed, and CI workflow status (shields.io).
+- Shipped via PR #3 (`test` → `main`), CI green, merged (`6b7bf6b`), local `main` synced.
+
 ### Deployed to production on Vercel (completed)
 - **Git flow:** Set `main` as the GitHub default branch (was `test`). Committed production-readiness work (`671d1cc`), opened PR #1 (`test` → `main`) via GitHub API, waited for CI (GitGuardian + Typecheck & Build all green), merged (merge commit `6c94a94`), and synced local `main`.
 - **Vercel project:** Created project `navis` (`prj_ZYg43ZTcNfKYjB2Jh29E2OaymZxJ`) under team `cobis-projects`, authenticated as `ceenobi`. Production deployment `dpl_FE7LedpUGnXhhAg6rmMjM5XpAq6G` is **Ready** with aliases `navis-cobis-projects.vercel.app` and `navis-six.vercel.app` (Node 24.x). Updated Vercel CLI 41.0.1 → 59.1.3 (old CLI failed uploads with `ECONNREFUSED`).
