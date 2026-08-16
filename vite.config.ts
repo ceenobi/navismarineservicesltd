@@ -7,4 +7,14 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  server: {
+    host: "localhost",
+    port: 3200,
+    open: true,
+    allowedHosts: [
+      "localhost",
+      "127.0.0.1",
+      "::1",
+    ],
+  },
 });
