@@ -2,6 +2,17 @@
 
 ## Recent Accomplishments
 
+### Production readiness for Vercel (completed)
+- **Pre-rendering:** Added `prerender: ["/", "/about", "/contact"]` to `react-router.config.ts` alongside `ssr: true` + `vercelPreset()`. Build now emits static HTML (`build/client/index.html`, `about/index.html`, `contact/index.html`); the `/contact` POST `action` still runs on the runtime server. Verified via `yarn build` + `react-router-serve` (GETs 200, POST action executes).
+- **Security headers:** Added a `headers` block to `vercel.json` (the correct place — prerendered HTML is served as static files, so middleware-set headers would never reach it). HSTS, X-Frame-Options DENY, X-Content-Type-Options nosniff, Referrer-Policy, Permissions-Policy, and a static CSP (`default-src 'self'`; `'unsafe-inline'` for scripts since React Router SSR inline hydration + inline JSON-LD can't be nonced on static files; `img-src`/`media-src` allowlist `res.cloudinary.com` + phone-flag CDN `purecatamphetamine.github.io`; `object-src 'none'`; `frame-ancestors 'none'`; `upgrade-insecure-requests`). Immutable `Cache-Control` for `/assets/*`.
+- **.gitignore:** Added `.vercel/` and untracked the committed build artifact `.vercel/react-router-build-result.json`.
+- **CI workflow:** Added `.github/workflows/ci.yml` (Node 24, Corepack-enable + Yarn 4, `yarn typecheck` + `yarn build` on push/PR to `test`/`main`), matching the AGENTS.md test→PR→CI→merge flow.
+- **package.json:** Added `packageManager: "yarn@4.16.0"` (pins Corepack for Vercel builds); fixed the `start` script to locate the hashed server bundle (`find ./build/server -name index.js`) since the Vercel preset's `serverBundles` no longer emits `build/server/index.js`.
+- **Logo optimization:** Recompressed the 912KB `public/navislogo.svg` to 112KB — the embedded raster was a 1080×1080 PNG rendered at 75×75; downscaled to 300×300 (4× retina) and re-embedded. Pixel-diff verified (only resampling edge variance in the raster mark; vector text identical).
+- **Sitemap:** Added `/about` and `/contact` URLs to `public/sitemap.xml`.
+- **Housekeeping:** Removed the committed `public/.well-known/appspecific/com.chrome.devtools.json` dev-tooling artifact.
+- Verified: `yarn typecheck`, `yarn build` (all 3 routes prerender), `yarn start` serves `/`, `/about/`, `/contact/` (200) and the contact POST action executes gracefully with the empty `BREVO_API_KEY`.
+
 ### About Navis section (completed)
 - Built out the About page `AboutNavis` section (`app/components/features/about-navis/about.tsx`) into a full editorial two-column layout matching the site's design language.
 - Left column: `About Navis` badge, split heading **"Founded on *watchkeeping discipline*."** (deepOrange accent preserved by `useSplitWords`), two intro paragraphs, and dual CTA buttons (Explore our services / Get in touch).
