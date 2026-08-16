@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import { gsap, useGSAP } from "~/lib/gsap";
 import { Button } from "~/components/ui/button";
 
 export default function Hero() {

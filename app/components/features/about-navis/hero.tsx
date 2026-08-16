@@ -1,5 +1,4 @@
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { gsap, useGSAP } from "~/lib/gsap";
 import { useRef } from "react";
 
 export default function Hero() {
