@@ -1,7 +1,52 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router";
 import { gsap, useGSAP } from "~/lib/gsap";
 import { Button } from "~/components/ui/button";
+
+const VIDEO_HLS =
+  "https://res.cloudinary.com/ceenobi/video/upload/sp_auto/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.m3u8";
+const VIDEO_MP4 =
+  "https://res.cloudinary.com/ceenobi/video/upload/q_auto,w_1280/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.mp4";
+const POSTER_IMAGE =
+  "https://res.cloudinary.com/ceenobi/image/upload/q_auto,f_auto,w_1920/v1786799802/clientproject/navis/hero1_x2p0sz.jpg";
+
+function HeroBackground() {
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  return (
+    <>
+      <img
+        data-hero="bg"
+        src={POSTER_IMAGE}
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
+      />
+      {!videoFailed && (
+        <video
+          data-hero="bg"
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          disablePictureInPicture
+          controlsList="nodownload noremoteplayback"
+          poster={POSTER_IMAGE}
+          onError={() => setVideoFailed(true)}
+        >
+          <source src={VIDEO_HLS} type="application/x-mpegURL" />
+          <source src={VIDEO_MP4} type="video/mp4" />
+        </video>
+      )}
+    </>
+  );
+}
 
 export default function Hero() {
   const scope = useRef<HTMLElement>(null);
@@ -48,23 +93,7 @@ export default function Hero() {
       aria-label="Hero"
       className="relative isolate min-h-[60svh] lg:min-h-svh flex items-center justify-center overflow-hidden"
     >
-      <video
-        data-hero="bg"
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-        controlsList="nodownload noremoteplayback"
-      >
-        <source
-          src="https://res.cloudinary.com/ceenobi/video/upload/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <HeroBackground />
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
       <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
         <div className="text-center space-y-8">
