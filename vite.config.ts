@@ -7,6 +7,13 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  environments: {
+    ssr: {
+      resolve: {
+        noExternal: ["gsap"],
+      },
+    },
+  },
   server: {
     host: "localhost",
     port: 3200,
