@@ -1,7 +1,10 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router";
 import { gsap, useGSAP } from "~/lib/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { Button } from "~/components/ui/button";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VIDEO_MP4 =
   "https://res.cloudinary.com/ceenobi/video/upload/q_auto,w_1280/v1786887919/image-to-video/i2v_c04f2f4bd8ee4baf92a608d7727bbc87.mp4";
@@ -15,6 +18,12 @@ function HeroBackground() {
   const startPlayback = () => {
     const video = videoRef.current;
     if (!video) return;
+    const hero = video.closest("section");
+    const covered =
+      typeof window !== "undefined" &&
+      hero !== null &&
+      window.scrollY >= hero.offsetHeight * 0.95;
+    if (covered) return;
     video.play().catch(() => {
       setVideoFailed(true);
     });
@@ -64,6 +73,22 @@ export default function Hero() {
       gsap.set("[data-hero='bg']", { scale: 1.2, transformOrigin: "center" });
 
       const mm = gsap.matchMedia();
+
+      const video = scope.current?.querySelector<HTMLVideoElement>("video");
+
+      ScrollTrigger.create({
+        trigger: scope.current,
+        start: "top top",
+        end: "bottom top",
+        onToggle: (self) => {
+          if (!video) return;
+          if (self.isActive) {
+            if (video.readyState >= 2) video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        },
+      });
 
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         gsap.fromTo(
