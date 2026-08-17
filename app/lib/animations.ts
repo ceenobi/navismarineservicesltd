@@ -132,9 +132,9 @@ export function useSplitWords(
       nodes.forEach((node) => {
         if (node.nodeType === Node.TEXT_NODE) {
           const words = (node.textContent ?? "").split(/\s+/).filter(Boolean);
-          words.forEach((w) =>
-            tokens.push({ word: w, className: inheritClass })
-          );
+          words.forEach((w) => {
+            tokens.push({ word: w, className: inheritClass });
+          });
         } else if (node.nodeType === Node.ELEMENT_NODE) {
           const el = node as HTMLElement;
           const cls = [inheritClass, el.className]
