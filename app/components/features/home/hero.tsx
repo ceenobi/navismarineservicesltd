@@ -21,7 +21,7 @@ function HeroBackground() {
   };
 
   return (
-    <div data-hero="parallax" aria-hidden="true" className="absolute inset-0 will-change-transform">
+    <div data-hero="parallax" aria-hidden="true" className="absolute inset-0 -z-10 will-change-transform">
       <img
         data-hero="bg"
         src={POSTER_IMAGE}
