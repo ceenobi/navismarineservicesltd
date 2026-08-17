@@ -51,9 +51,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         {[organizationJsonLd(), websiteJsonLd(), professionalServiceJsonLd()].map(
-          (data, i) => (
+          (data) => (
             <script
-              key={i}
+              key={data["@type"]}
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
             />
