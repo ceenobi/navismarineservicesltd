@@ -309,12 +309,14 @@ export default function AboutNavis() {
                 width="441"
                 height="730"
                 data-reveal
+                data-reveal-from="left"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full"
               />
               <div
                 data-reveal
+                data-reveal-from="bottom"
                 className="bg-deepBlue px-4 py-6 rounded-b-xl flex gap-2 items-start"
               >
                 <img src="/iconsax-quote-up.svg" alt="" aria-hidden="true" />
