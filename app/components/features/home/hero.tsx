@@ -46,6 +46,7 @@ function HeroBackground() {
           ref={videoRef}
           data-hero="bg"
           aria-hidden="true"
+          tabIndex={-1}
           className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
           autoPlay
           muted
