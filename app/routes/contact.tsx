@@ -137,7 +137,7 @@ export default function Contact() {
             height="542"
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover object-center overflow-hidden"
+            className="h-full w-full object-cover object-center"
           />
         </div>
         <div className="col-span-12 md:col-span-8 lg:col-span-6 relative z-30 bg-white flex items-center">

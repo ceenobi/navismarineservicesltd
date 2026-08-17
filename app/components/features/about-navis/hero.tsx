@@ -1,5 +1,5 @@
-import { gsap, useGSAP } from "~/lib/gsap";
 import { useRef } from "react";
+import { gsap, useGSAP } from "~/lib/gsap";
 
 export default function Hero() {
   const scope = useRef<HTMLElement>(null);
@@ -44,14 +44,14 @@ export default function Hero() {
       aria-label="Hero"
       className="relative isolate min-h-[60svh] lg:min-h-svh flex items-center justify-center overflow-hidden"
     >
-      <img
-        src="https://res.cloudinary.com/ceenobi/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/f_webp/e_trim/clientproject/navis/image_10_ulq3xs.png"
-        alt=""
+      <img 
+        src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786968693/clientproject/navis/photo-1605745341112-85968b19335b_uy8oqi.avif"
+        alt="Photo by Jermey Bishop on Unsplash"
         aria-hidden="true"
         loading="eager"
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 -z-10 w-full h-full object-cover"
+        className="absolute inset-0 -z-10 w-full h-full object-cover" 
       />
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
       <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
@@ -62,6 +62,8 @@ export default function Hero() {
           >
             Navigating Excellence Across Maritime Services
           </h1>
+          <p data-hero="fade"
+          className="text-balance text-lg text-softWhite">Delivering seamless technical and operational solutions across global waters.</p>
         </div>
       </div>
     </section>

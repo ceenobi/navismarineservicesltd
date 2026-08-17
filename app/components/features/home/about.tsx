@@ -47,6 +47,7 @@ export default function About() {
         <div className="col-span-12 md:col-span-5 space-y-4">
           <img
             data-reveal
+            data-reveal-from="left"
             src="https://res.cloudinary.com/ceenobi/image/upload/q_auto:best/v1786799205/clientproject/navis/ship1_ey3euh.webp"
             alt="ship"
             loading="lazy"
@@ -55,6 +56,7 @@ export default function About() {
           />
           <img
             data-reveal
+            data-reveal-from="left"
             src="https://res.cloudinary.com/ceenobi/image/upload/q_auto:best/v1786799207/clientproject/navis/ship2_cw5iqp.webp"
             alt="ship"
             loading="lazy"
@@ -65,6 +67,7 @@ export default function About() {
         <div className="col-span-12 md:col-span-7">
           <img
             data-reveal
+            data-reveal-from="right"
             src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto:best/v1786799195/clientproject/navis/ship3_yx7s6d.svg"
             alt="ship"
             loading="lazy"
