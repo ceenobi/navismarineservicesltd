@@ -32,6 +32,21 @@ export default function Hero() {
             stagger: 0.15,
           },
         );
+
+        gsap.fromTo(
+          "[data-hero='parallax']",
+          { scale: 1.08 },
+          {
+            scale: 1.3,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scope.current,
+              start: "top top",
+              end: "+=100%",
+              scrub: true,
+            },
+          },
+        );
       });
 
       return () => mm.revert();
@@ -42,17 +57,23 @@ export default function Hero() {
     <section
       ref={scope}
       aria-label="Hero"
-      className="relative isolate min-h-[60svh] lg:min-h-svh flex items-center justify-center overflow-hidden"
+      className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden"
     >
-      <img 
-        src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786968693/clientproject/navis/photo-1605745341112-85968b19335b_uy8oqi.avif"
-        alt="Photo by Jermey Bishop on Unsplash"
+      <div
+        data-hero="parallax"
         aria-hidden="true"
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 -z-10 w-full h-full object-cover" 
-      />
+        className="absolute inset-0 -z-10 will-change-transform"
+      >
+        <img
+          data-hero="bg"
+          src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786968693/clientproject/navis/photo-1605745341112-85968b19335b_uy8oqi.avif"
+          alt="Photo by Jermey Bishop on Unsplash"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 -z-10 w-full h-full object-cover will-change-transform"
+        />
+      </div>
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
       <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
         <div className="text-center space-y-8">

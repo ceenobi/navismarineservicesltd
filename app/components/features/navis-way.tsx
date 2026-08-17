@@ -11,7 +11,7 @@ export default function NavisWay() {
   useCountUp(scope, "[data-count]");
 
   return (
-    <div ref={scope} className="bg-deepBlue py-10">
+    <div ref={scope} className="relative z-10 bg-deepBlue py-10">
       <div className="max-w-6xl mx-auto py-10 px-4 md:px-8 space-y-10 text-center">
         <Badge data-reveal className="bg-paleBlue uppercase text-deepBlue p-4 text-base font-normal">
           The navis way
