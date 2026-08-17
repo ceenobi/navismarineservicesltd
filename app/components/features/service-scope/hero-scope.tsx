@@ -34,6 +34,21 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
             stagger: 0.15,
           },
         );
+
+        gsap.fromTo(
+          "[data-hero='parallax']",
+          { scale: 1.08 },
+          {
+            scale: 1.3,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scope.current,
+              start: "top top",
+              end: "+=100%",
+              scrub: true,
+            },
+          },
+        );
       });
 
       return () => mm.revert();
@@ -41,32 +56,33 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
     { scope },
   );
   return (
-
-    <section ref={scope}
+    <section
+      ref={scope}
       aria-label="Hero"
-      className="sticky top-0 z-0 h-svh flex items-center justify-start overflow-hidden">
-      <div
-        data-hero="parallax"
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 will-change-transform"
-      >
+      className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden">
+    <div
+      data-hero="parallax"
+      aria-hidden="true"
+      className="absolute inset-0 -z-10 will-change-transform"
+    >
         <img
           data-hero="bg"
           src={service.cover}
-          alt="Photo by Timelab on Unsplash"
+          alt={service.title}
+          aria-hidden="true"
           loading="eager"
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 -z-10 w-full h-full object-cover will-change-transform"
         />
-      </div>
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
+    </div>
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
       <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
-        <div className="flex flex-col justify-start w-full text-start space-y-8">
+        <div className="text-start space-y-8">
           <div className="inline-flex gap-2 items-center">
             <Link to="/services">
               <p data-hero="fade" className="hover:text-mainWhite text-balance text-xl text-softWhite">Service /</p></Link>
-            <span className="text-deepOrange text-xl">{service.title}</span>
+            <span data-hero="fade" className="text-deepOrange text-xl">{service.title}</span>
           </div>
           <img
             src={service.logo}
@@ -74,6 +90,8 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
             loading="lazy"
             decoding="async"
             className="size-13"
+            data-reveal
+            data-reveal-from="left"
           />
           <div className="space-y-4">
             <h1 data-hero="fade"
