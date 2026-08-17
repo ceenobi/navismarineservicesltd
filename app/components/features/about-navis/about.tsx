@@ -217,6 +217,7 @@ export default function AboutNavis() {
           <div className="col-span-12 md:col-span-6 lg:col-span-5">
             <img
               data-reveal
+              data-reveal-from="right"
               src="https://res.cloudinary.com/ceenobi/image/upload/f_webp/e_trim/f_webp/q_auto:best/dpr_auto/clientproject/navis/NavisMarine_bwmed7.png"
               alt="Navis Marine vessel and mariner"
               width="427"
