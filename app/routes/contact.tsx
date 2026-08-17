@@ -20,7 +20,7 @@ import type { Route } from "./+types/contact";
 import { contactEmailTemplate } from "~/components/ui/email-template";
 type contactSchemaType = z.infer<typeof contactSchema>;
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_args: Route.MetaArgs) {
   return seoMeta({
     title:
       "Contact Navis Marine Services Ltd | Ship Agency & Maritime Solutions in Nigeria",
