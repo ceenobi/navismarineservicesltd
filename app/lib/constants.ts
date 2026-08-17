@@ -183,3 +183,116 @@ export const servicelist = [
     href: "/services/executive-concierge",
   },
 ];
+
+export type ServiceScope = {
+  id: number;
+  cover: string;
+  title: string;
+  subTitle: string;
+  slug: string;
+  logo: string;
+  detail: string[];
+  scope: {
+    id: number;
+    title: string;
+    subTitle: string;
+    image: string;
+  }[];
+};
+
+export const serviceScope: ServiceScope[] = [
+  {
+    id: 1,
+    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787000921/clientproject/navis/photo-1670121180583-39ab653a071c_qktzoq.jpg",
+    logo: "/services/anchor1.svg",
+    title: "Ship Agency",
+    slug: "ship-agency",
+    subTitle: "Full port agency, husbandry and protective agency services with disciplined, transparent port call management.",
+    detail: ["NAVIS acts as your trusted local representative, coordinating vessel arrivals, port operations, documentation, authorities, terminals and departure requirements.", "We keep shipowners, operators and charterers informed while focusing on efficient operations, regulatory compliance and minimizing delays."],
+    scope: [
+      {
+        id: 1,
+        title: "Port & Protective Agency",
+        subTitle: "We represent your vessel throughout its port stay. Our team manages documentation, authorities, and port coordination for smooth operations.",
+        image:"/services/agency1.svg"
+      },
+      {
+        id: 2,
+        title: "Husbandry Services",
+        subTitle: "Comprehensive support for crew, repairs, and vessel requirements. We ensure every operational need is handled efficiently.",
+        image:"/services/agency2.svg"
+      },
+      {
+        id: 3,
+        title: "Crew Changes",
+        subTitle: "We coordinate seamless crew embarkation and disembarkation. Immigration, transport, and logistics are managed with minimal delays.",
+        image:"/services/agency3.svg"
+      },
+      {
+        id: 4,
+        title: "Bunkering Coordination",
+        subTitle: "Safe and timely bunker operations coordinated with trusted suppliers. We prioritize efficiency and operational compliance.",
+        image:"/services/agency4.svg"
+      },
+      {
+        id: 5,
+        title: "Cargo & Logistics Coordination",
+        subTitle: "We synchronize cargo movement and shore-side logistics. Our coordination helps reduce delays and improve turnaround time.",
+        image:"/services/agency5.svg"
+      },
+      {
+        id: 6,
+        title: "Import & Export Support",
+        subTitle: "We facilitate customs documentation and cargo clearance. Our local expertise ensures compliant import and export processes.",
+        image:"/services/agency6.svg"
+      },
+    ]
+  },
+  {
+    id: 2,
+    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787001259/clientproject/navis/image_16_ppdjnj.png",
+    logo: "/services/ship-wheel.svg",
+    title: "Maritime Consultancy",
+    slug: "maritime-consultancy",
+    subTitle: "Practical maritime expertise supporting safer operations, stronger compliance and better commercial decisions.",
+    detail: ["Our Maritime Consultancy service provides practical technical, operational, and commercial advisory tailored to the evolving needs of the shipping and offshore industries.", "Backed by extensive international maritime experience, we help clients improve operational performance, strengthen compliance, manage risk, and support strategic decision-making.", "Every recommendation is built on real-world maritime expertise and industry best practice."],
+    scope: [
+      {
+        id: 1,
+        title: "Marine Operations Advisory",
+        subTitle: "Expert guidance to improve vessel performance and operational efficiency. We support informed decision-making across maritime operations.",
+        image:"/services/mar1.svg"
+      },
+      {
+        id: 2,
+        title: "Compliance Advisory",
+        subTitle: "We help organizations meet international maritime regulations. Our advice strengthens compliance and operational confidence.",
+        image:"/services/mari2.svg"
+      },
+      {
+        id: 3,
+        title: "Operational Reviews",
+        subTitle: "We assess existing procedures and identify improvement opportunities. Practical recommendations drive better operational outcomes.",
+        image:"/services/mari3.svg"
+      },
+      {
+        id: 4,
+        title: "Risk Management",
+        subTitle: "We identify, evaluate, and reduce operational risks. Our approach protects people, assets, and business continuity.",
+        image:"/services/mari4.svg"
+      },
+      {
+        id: 5,
+        title: "Project & Technical Support",
+        subTitle: "Technical expertise for marine projects and specialized operations. We provide dependable support from planning to execution.",
+        image:"/services/mari5.svg"
+      },
+      {
+        id: 6,
+        title: "Commercial Maritime Advisory",
+        subTitle: "Strategic advice for commercial and operational maritime decisions. We help clients maximize value and minimize risk.",
+        image:"/services/mari6.svg"
+      },
+    ]
+  },
+]

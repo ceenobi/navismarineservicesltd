@@ -1,7 +1,8 @@
-import { seoMeta, SITE_DESCRIPTION } from "~/lib/seo";
-import type { Route } from "./+types/route";
+import { Outlet, useLocation } from "react-router";
 import HeroServices from "~/components/features/services/hero";
 import ServiceList from "~/components/features/services/service-list";
+import { seoMeta, SITE_DESCRIPTION } from "~/lib/seo";
+import type { Route } from "./+types/route";
 
 export function meta({}: Route.MetaArgs) {
   return seoMeta({
@@ -14,10 +15,18 @@ export function meta({}: Route.MetaArgs) {
 
 
 export default function Services() {
+  const location = useLocation()
+  const isServicePage = location.pathname === "/services";
   return (
     <>
+      {isServicePage ?
+      <>
       <HeroServices />
-      <ServiceList/>
+      <ServiceList />
+       </>
+        :
+        <Outlet />
+      }
     </>
   );
 }
