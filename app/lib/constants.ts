@@ -123,6 +123,63 @@ export const leadership = [
     description:
       "Dedicated to creating lasting value for clients through integrity, transparency and exceptional services.",
   },
+  {
+    id: 6,
+    img: "/award-line.svg",
+    title: "Professional Memberships",
+    description:
+      "Associate Fellow, The Nautical Institute (AFNI), Associate Member Nigerian Gas Association (AMNGA)",
+  },
 ];
 
+export const servicelist = [
+  {
+    id: 1,
+    image: "/sev1.svg",
+    title: "Ship Agency",
+    description:
+      "Full port agency, husbandry and protective agency services with disciplined, transparent port call management.",
+    href: "/services/ship-agency",
+  },
+  {
+    id: 2,
+    image: "/sev2.svg",
+    title: "Maritime Consultancy",
+    description:
+      "Practical maritime expertise supporting safer operations, stronger compliance and better commercial decisions.",
+    href: "/services/maritime-consultancy",
+  },
+  {
+    id: 3,
+    image: "/sev3.svg",
+    title: "HSSEQ & Compliance",
+    description:
+      "Strengthening maritime safety, security, environmental performance and regulatory compliance.",
+    href: "/services/hsseq-compliance",
+  },
+  {
+    id: 4,
+    image: "/sev4.svg",
+    title: "Marine Procurement",
+    description:
+      "Reliable sourcing of vessel supplies, equipment, spares and operational essentials",
+    href: "/services/marine-procurement",
+  },
+  {
+    id: 5,
+    image: "/sev5.svg",
+    title: "Marine Logistics",
+    description:
+      "Coordinating cargo, transportation and shore-side logistics around your vessel's schedule.",
+    href: "/services/marine-logistics",
+  },
 
+  {
+    id: 6,
+    image: "/sev6.svg",
+    title: "Executive Concierge",
+    description:
+      "Discreet, responsive support for shipowners, senior executives and maritime professionals.",
+    href: "/services/executive-concierge",
+  },
+];
