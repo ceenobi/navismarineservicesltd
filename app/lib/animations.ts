@@ -1,6 +1,6 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap, useGSAP } from "~/lib/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import { useLayoutEffect } from "react";
+import { gsap, useGSAP } from "~/lib/gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,18 +46,18 @@ export function useReveal(
         const targets = gsap.utils.toArray(target) as HTMLElement[];
 
         const perElFrom = (): gsap.TweenVars => {
-          const fromX: gsap.TweenValue = (i: number, el: Element) => {
+          const fromX: gsap.TweenValue = (_i: number, el: Element) => {
             const dir = (el as HTMLElement).dataset.revealFrom;
             if (dir === "left") return -48;
             if (dir === "right") return 48;
             return 0;
           };
-          const fromY: gsap.TweenValue = (i: number, el: Element) => {
+          const fromY: gsap.TweenValue = (_i: number, el: Element) => {
             const dir = (el as HTMLElement).dataset.revealFrom;
             if (dir === "left" || dir === "right") return 0;
             return y;
           };
-          const fromScale: gsap.TweenValue = (i: number, el: Element) => {
+          const fromScale: gsap.TweenValue = (_i: number, el: Element) => {
             const elScale = (el as HTMLElement).dataset.revealScale;
             if (elScale !== undefined) return Number(elScale);
             return scale ?? 1;
