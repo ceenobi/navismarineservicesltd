@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navlinks = [...navLinks, { id: 4, path: "/contact", label: "Contact" }]
   return (
     <>
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -47,11 +48,12 @@ export default function Drawer() {
               aria-label="Primary"
               className="flex flex-col gap-4 items-center"
             >
-              {navLinks.map((link) => (
+              {navlinks.map((link) => (
                 <NavLink
                   key={link.id}
                   to={link.path}
                   className="cursor-pointer font-sans text-lg hover:text-deepOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deepOrange/70 focus-visible:rounded-sm transition-all duration-300 ease-in-out"
+                   onClick={() => setIsOpen(false)}
                 >
                   {({ isActive }) => (
                     <span
