@@ -371,16 +371,26 @@ export default function AboutNavis() {
               data-reveal
               className="text-lightGray text-base sm:text-lg tracking-[1%]"
             >
-              He leads the company's strategy, upholds the highest standards of
-              professional conduct, and builds strong, long-term relationships
-              with clients partners.
-            </p>
-            {leadership.map((item) => (
-              <div
+              He is an Associate Fellow of The Nautical Institute (AFNI) and an Associate Member of the Nigerian Gas Association (AMNGA).
+              </p>
+              <p
+                data-reveal
+                className="text-lightGray text-base sm:text-lg tracking-[1%]">
+              He leads the company's strategy, upholds the highest standards of professional conduct, and builds strong, long-term relationships with clients partners.
+              </p>
+              <p
+                data-reveal
+                className="mb-8 text-lightGray text-base sm:text-lg tracking-[1%]">
+                  Beyond his role at Navis Marine, Capt. Nwajiaku serves as a Trustee
+                  of the Arctic Convoy Museum, reflecting his commitment to maritime
+                  heritage and public service.
+              </p>
+              {leadership.map((item) => (
+                <div
                 key={item.id}
                 data-reveal
                 className="flex md:hidden lg:flex gap-3 items-start"
-              >
+                >
                 <img src={item.img} alt={item.title} width="52" height="52" />
                 <div>
                   <h3 className="text-deepBlue font-semibold text-lg tracking-tight">
@@ -484,7 +494,7 @@ export default function AboutNavis() {
               growth.
             </p>
           </div>
-          <Separator className="my-8 bg-lightGray/30" />
+          {/*<Separator className="my-8 bg-lightGray/30" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div className="space-y-3">
               <Badge
@@ -516,7 +526,7 @@ export default function AboutNavis() {
                 The Nautical Institute
               </Badge>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </>

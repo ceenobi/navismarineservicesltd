@@ -1,51 +1,10 @@
 import { useRef } from "react";
-import { RiArrowRightLine } from "@remixicon/react";
 import { Link } from "react-router";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
+import { ServiceCard } from "~/components/ui/service-card";
+import { useReveal, useSplitWords } from "~/lib/animations";
 import { services } from "~/lib/constants";
-import { useHoverTilt, useReveal, useSplitWords } from "~/lib/animations";
-
-function ServiceCard({ service }: { service: (typeof services)[number] }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  useHoverTilt(cardRef, 6);
-
-  return (
-    <div
-      ref={cardRef}
-      data-reveal
-      data-reveal-scale="0.96"
-      className="bg-white p-4 rounded-lg shadow text-center md:text-left overflow-hidden flex flex-col justify-between items-center md:items-start transition-[box-shadow,transform] duration-300 ease-out hover:shadow-lg"
-    >
-      <img
-        src={service.image}
-        alt={service.title}
-        loading="lazy"
-        decoding="async"
-        className="size-13 object-cover rounded-md"
-      />
-      <div>
-        <h2 className="font-heading text-deepBlue font-semibold text-xl mt-4">
-          {service.title}
-        </h2>
-        <p className="text-lightGray text-sm mt-2 text-balance">
-          {service.description}
-        </p>
-      </div>
-      <Link
-        to={service.href}
-        prefetch="intent"
-        className="group mt-4 inline-flex gap-2 items-center text-deepBlue hover:text-deepOrange transition-colors duration-300 ease-in font-medium"
-      >
-        Learn More{" "}
-        <RiArrowRightLine
-          size={18}
-          className="transition-transform duration-300 ease-in group-hover:translate-x-1"
-        />
-      </Link>
-    </div>
-  );
-}
 
 export default function Services() {
   const scope = useRef<HTMLDivElement>(null);
@@ -75,8 +34,8 @@ export default function Services() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+          {services.map((service, i) => (
+            <ServiceCard key={service.id} service={service} index={i} />
           ))}
         </div>
         <Link to="/services">
