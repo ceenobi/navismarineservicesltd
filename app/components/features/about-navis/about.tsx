@@ -30,10 +30,11 @@ export default function AboutNavis() {
 
   return (
     <>
-      <div
-        ref={mainScope}
-        className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-12"
-      >
+      <div className="relative z-10 bg-mainWhite">
+        <div
+          ref={mainScope}
+          className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-12"
+        >
         <div className="grid grid-cols-12 gap-4 md:gap-8 items-start">
           <div className="col-span-12 md:col-span-6 space-y-6">
             <Badge
@@ -231,8 +232,9 @@ export default function AboutNavis() {
             />
           </div>
         </div>
+        </div>
       </div>
-      <div className="bg-paleWhite py-20">
+      <div className="relative z-10 bg-paleWhite py-20">
         <div
           ref={missionScope}
           className="max-w-6xl mx-auto py-10 px-4 md:px-8 space-y-20"
@@ -299,10 +301,11 @@ export default function AboutNavis() {
         </div>
       </div>
       <NavisWay />
-      <div
-        ref={leadershipScope}
-        className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-20"
-      >
+      <div className="relative z-10 bg-mainWhite">
+        <div
+          ref={leadershipScope}
+          className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-20"
+        >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 xl:gap-16">
           <div className="col-span-12 md:col-span-5">
             <div className="w-full max-w-90 mx-auto relative rounded-xl overflow-hidden">
@@ -415,8 +418,9 @@ export default function AboutNavis() {
             </div>
           ))}
         </div>
+        </div>
       </div>
-      <div className="bg-paleWhite py-20">
+      <div className="relative z-10 bg-paleWhite py-20">
         <div ref={governanceScope} className="max-w-6xl mx-auto py-10 px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div className="space-y-3">

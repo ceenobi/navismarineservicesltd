@@ -9,10 +9,11 @@ export default function WhyChoose() {
   useSplitWords(scope, "[data-split]");
 
   return (
-    <div
-      ref={scope}
-      className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-10"
-    >
+    <div className="relative z-10 bg-mainWhite">
+      <div
+        ref={scope}
+        className="max-w-6xl mx-auto py-20 px-4 md:px-8 space-y-10"
+      >
       <Badge data-reveal className="bg-paleBlue uppercase text-deepBlue p-4 text-base font-normal">
         why choose Navis
       </Badge>
@@ -177,6 +178,7 @@ export default function WhyChoose() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
