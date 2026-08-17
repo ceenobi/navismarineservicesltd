@@ -21,12 +21,11 @@ function HeroBackground() {
   };
 
   return (
-    <>
+    <div data-hero="parallax" aria-hidden="true" className="absolute inset-0 will-change-transform">
       <img
         data-hero="bg"
         src={POSTER_IMAGE}
         alt=""
-        aria-hidden="true"
         loading="eager"
         fetchPriority="high"
         decoding="async"
@@ -52,7 +51,7 @@ function HeroBackground() {
           <source src={VIDEO_MP4} type="video/mp4" />
         </video>
       )}
-    </>
+    </div>
   );
 }
 
@@ -88,6 +87,21 @@ export default function Hero() {
             stagger: 0.15,
           }
         );
+
+        gsap.fromTo(
+          "[data-hero='parallax']",
+          { scale: 1.08 },
+          {
+            scale: 1.3,
+            ease: "none",
+            scrollTrigger: {
+              trigger: scope.current,
+              start: "top top",
+              end: "+=100%",
+              scrub: true,
+            },
+          }
+        );
       });
 
       return () => mm.revert();
@@ -99,7 +113,7 @@ export default function Hero() {
     <section
       ref={scope}
       aria-label="Hero"
-      className="relative isolate min-h-[60svh] lg:min-h-svh flex items-center justify-center overflow-hidden"
+      className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden"
     >
       <HeroBackground />
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
