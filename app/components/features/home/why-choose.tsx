@@ -18,13 +18,13 @@ export default function WhyChoose() {
         why choose Navis
       </Badge>
       <div className="space-y-2 w-full max-w-210.75">
-        <h1
+        <h2
           data-split
           className="font-heading text-deepBlue text-balance font-semibold text-[34px] sm:text-[42px] xl:text-[38px] leading-tight"
         >
           Your trusted partner in{" "}
           <span className="text-deepOrange">maritime excellence.</span>
-        </h1>
+        </h2>
         <p data-reveal className="text-lightGray text-lg">
           We combine industry expertise, operational efficiency, and
           international standards to deliver dependable maritime services that
@@ -45,9 +45,9 @@ export default function WhyChoose() {
             loading="lazy"
             className="size-14.5"
           />
-          <h2 className="font-heading text-deepBlue font-semibold text-2xl mt-4">
+          <h3 className="font-heading text-deepBlue font-semibold text-2xl mt-4">
             Master Mariner Leadership
-          </h2>
+          </h3>
           <p className="mt-4 text-lightGray text-base">
             Led by experienced maritime professionals with proven international
             expertise and industry knowledge. We combine practical experience
@@ -70,9 +70,9 @@ export default function WhyChoose() {
               className="size-11"
             />
             <div className="space-y-2">
-              <h2 className="font-heading text-deepBlue font-semibold text-2xl">
+              <h3 className="font-heading text-deepBlue font-semibold text-2xl">
                 International Experience
-              </h2>
+              </h3>
               <p className="text-lightGray text-base">
                 Delivering trusted solutions across global maritime operations.
               </p>
@@ -93,9 +93,9 @@ export default function WhyChoose() {
                 className="size-11"
               />
               <div className="space-y-4">
-                <h2 className="font-heading text-deepBlue font-semibold text-2xl">
+                <h3 className="font-heading text-deepBlue font-semibold text-2xl">
                   24/7 Operations
-                </h2>
+                </h3>
                 <p className="text-lightGray text-base">
                   Round-the-clock support whenever you need it. We're ready
                   whenever your business needs us.
@@ -116,9 +116,9 @@ export default function WhyChoose() {
                 className="size-11"
               />
               <div className="space-y-4">
-                <h2 className="font-heading text-deepBlue font-semibold text-2xl">
+                <h3 className="font-heading text-deepBlue font-semibold text-2xl">
                   Integrity And Transparency
-                </h2>
+                </h3>
                 <p className="text-lightGray text-base">
                   Transparent disbursements and honest reporting, always.
                 </p>
@@ -142,9 +142,9 @@ export default function WhyChoose() {
             className="size-11"
           />
           <div className="space-y-4">
-            <h2 className="font-heading text-deepBlue font-semibold text-2xl">
+            <h3 className="font-heading text-deepBlue font-semibold text-2xl">
               Compliance
-            </h2>
+            </h3>
             <p className="text-lightGray text-base">
               We operate in line with international maritime regulations. Every
               service follows recognized HSSEQ standards and industry best
@@ -167,9 +167,9 @@ export default function WhyChoose() {
             className="size-11"
           />
           <div className="space-y-4">
-            <h2 className="font-heading text-deepBlue font-semibold text-2xl">
+            <h3 className="font-heading text-deepBlue font-semibold text-2xl">
               Operational Excellence
-            </h2>
+            </h3>
             <p className="text-lightGray text-base">
               We deliver efficient solutions that keep your operations running
               smoothly. Every project is executed with precision and

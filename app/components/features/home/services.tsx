@@ -19,13 +19,13 @@ export default function Services() {
           Our services
         </Badge>
         <div className="space-y-4">
-          <h1
+          <h2
             data-split
             className="font-heading text-deepBlue font-semibold text-[34px] sm:text-[42px] xl:text-[38px] text-balance leading-tight"
           >
             Comprehensive maritime services{" "}
             <span className="text-deepOrange">under one roof.</span>
-          </h1>
+          </h2>
           <p data-reveal className="text-lightGray text-lg text-balance">
             From vessel agency and port operations to consultancy, HSSEQ,
             procurement and logistics, NAVIS provides integrated maritime

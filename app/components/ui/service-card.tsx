@@ -27,9 +27,9 @@ export function ServiceCard({ service, index }: { service: (typeof services)[num
         className="size-13 object-cover rounded-md"
       />
       <div>
-        <h2 className="font-heading text-deepBlue font-semibold text-xl mt-4">
+        <h3 className="font-heading text-deepBlue font-semibold text-xl mt-4">
           {service.title}
-        </h2>
+        </h3>
         <p className="text-lightGray text-sm mt-2 text-balance">
           {service.description}
         </p>

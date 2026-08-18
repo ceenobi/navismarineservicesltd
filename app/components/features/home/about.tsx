@@ -21,13 +21,13 @@ export default function About() {
       </Badge>
       <div className="grid grid-cols-12 items-end gap-6">
         <div className="col-span-12 md:col-span-9 xl:col-span-10 space-y-4">
-          <h1
+          <h2
             data-split
             className="font-heading text-deepBlue font-semibold text-[34px] sm:text-[42px] xl:text-[38px] text-balance leading-tight"
           >
             Navigating Excellence Across{" "}
             <span className="text-deepOrange">Maritime Services</span>
-          </h1>
+          </h2>
           <p data-reveal className="text-lightGray text-lg">
             Navis Marine Services Ltd is a Nigerian maritime company with an
             international outlook, established to deliver premium Ship Agency,

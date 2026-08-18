@@ -17,12 +17,12 @@ export default function OurProcess() {
         <Badge data-reveal className="bg-paleBlue uppercase text-deepBlue p-4 text-base font-normal">
          our process
         </Badge>
-        <h1
+        <h2
           data-split
           className="font-heading text-paleWhite font-semibold text-[34px] sm:text-[42px] xl:text-[38px] text-balance leading-tight"
         >
          How the work runs.
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {processSteps.map((stat, index) => (
             <div
@@ -33,9 +33,9 @@ export default function OurProcess() {
                 (index === 4) && "md:border-r-0",
               )}
             >
-              <h1 className="font-heading font-bold text-deepOrange text-3xl text-balance">
+              <h3 className="font-heading font-bold text-deepOrange text-3xl text-balance">
                 {stat.title}
-              </h1>
+              </h3>
               <p className="text-softWhite text-sm sm:text-lg text-balance leading-none">
                 {stat.subTitle}
               </p>

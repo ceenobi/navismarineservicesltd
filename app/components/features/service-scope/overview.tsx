@@ -17,13 +17,13 @@ export default function Overview({ service }: { service: ServiceScope }) {
         <Badge data-reveal className="bg-paleBlue uppercase text-deepBlue p-4 text-base font-normal">
           overview
         </Badge>
-        <h1
+        <h2
           data-split
           className="font-heading text-deepBlue font-semibold text-[34px] sm:text-[42px] xl:text-[38px] text-balance leading-tight"
         >
           Service{" "}
           <span className="text-deepOrange">Overview</span>
-        </h1>
+        </h2>
         <div>
           {service.detail.map((item: string) => (
             <p key={item} data-hero="fade" className="text-balance text-lg text-lightGray">{item}</p>
