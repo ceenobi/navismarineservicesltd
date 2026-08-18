@@ -37,9 +37,9 @@ export default function About() {
           </p>
         </div>
         <div data-reveal className="col-span-12 md:col-span-2 text-end">
-          <Link to="/services">
+          <Link to="/services" prefetch="intent">
             <Button className="bg-deepOrange hover:bg-deepOrange/80 text-mainWhite w-full sm:w-38 py-6 px-6 rounded-full transition-[background-color,opacity] duration-300 ease-in-out">
-              Explore Our Services
+              Explore Services
             </Button>
           </Link>
         </div>

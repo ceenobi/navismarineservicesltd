@@ -75,11 +75,11 @@ export default function Hero() {
         />
       </div>
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
-      <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
+      <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-34 md:py-30 lg:py-20">
         <div className="text-center space-y-8">
           <h1
             data-hero="fade"
-            className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight"
+            className="font-heading text-3xl sm:text-[54px] font-bold text-mainWhite leading-tight"
           >
             Navigating Excellence Across Maritime Services
           </h1>

@@ -77,7 +77,7 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
         />
     </div>
         <div className="absolute inset-0 -z-10 bg-linear-to-l from-[#02152D] via-deepBlue to-[#2D3238] opacity-70" />
-      <div className="relative max-w-6xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
+      <div className="relative max-w-6xl mx-auto px-4 xl:px-8 py-34 md:py-30 lg:py-20">
         <div className="text-start space-y-4">
           <div className="inline-flex gap-2 items-center">
             <Link to="/services">
@@ -95,7 +95,7 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
           />
           <div className="space-y-4 w-full max-w-200">
             <h1 data-hero="fade"
-              className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title} in Nigeria</h1>
+              className="font-heading text-3xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title} in Nigeria</h1>
             <p data-hero="fade" className="text-balance text-xl text-softWhite">{service.subTitle}</p>
           </div>
         </div>
