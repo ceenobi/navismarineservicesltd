@@ -8,31 +8,16 @@ export default function Drawer() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navlinks = [...navLinks, { id: 4, path: "/contact", label: "Contact" }]
   return (
-    <>
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger
           render={
-            <>
-              {isOpen ? (
-                <button
-                  type="button"
-                  aria-label="Close navigation menu"
-                  className="md:hidden w-10 h-10 cursor-pointer hover:bg-softWhite rounded-full flex items-center justify-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <RiCloseLine size={28} />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  aria-label="Open navigation menu"
-                  className="md:hidden relative w-10 h-10 cursor-pointer flex items-center justify-center hover:bg-softWhite rounded-full"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <RiMenuFill size={28} />
-                </button>
-              )}
-            </>
+            <button
+              type="button"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              className="md:hidden relative w-10 h-10 cursor-pointer flex items-center justify-center hover:bg-softWhite rounded-full"
+            >
+              {isOpen ? <RiCloseLine size={28} /> : <RiMenuFill size={28} />}
+            </button>
           }
         />
         <SheetContent
@@ -73,6 +58,5 @@ export default function Drawer() {
           </div>
         </SheetContent>
       </Sheet>
-    </>
   );
 }
