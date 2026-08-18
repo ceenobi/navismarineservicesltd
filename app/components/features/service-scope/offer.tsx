@@ -1,4 +1,3 @@
-
 import { useRef } from "react";
 import { Badge } from "~/components/ui/badge";
 import { useHoverTilt, useReveal, useSplitWords } from "~/lib/animations";
@@ -25,14 +24,14 @@ export default function Offer({ service }: { service: ServiceScope }) {
           Scope of {" "}
           <span className="text-deepOrange">Service</span>
         </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {service.scope.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
+      {service.scope.map((item, index) => (
         <div
           ref={cardRef}
           data-reveal
-            data-reveal-scale="0.96"
-            key={item.id}
-          className={cn("border-l-4 border-deepOrange bg-white p-4 rounded-lg shadow text-center md:text-left overflow-hidden flex flex-col justify-between items-center md:items-start animate-in fade-in slide-in-from-bottom-4 transition-[box-shadow,transform] duration-300 ease-out hover:shadow-lg")}
+          data-reveal-scale="0.96"
+          key={item.id}
+          className={cn("border-l-4 border-deepOrange bg-white p-4 rounded-lg shadow text-center md:text-left overflow-hidden flex flex-col gap-4 items-center md:items-start animate-in fade-in slide-in-from-bottom-4 transition-[box-shadow,transform] duration-300 ease-out hover:shadow-lg")}
            style={{ animationDelay: `${index * 100}ms` }}
           >
             <img
@@ -43,11 +42,11 @@ export default function Offer({ service }: { service: ServiceScope }) {
               className="size-13 object-cover rounded-md"
             />
             <div>
-              <h2 className="font-heading text-deepBlue font-semibold text-xl mt-4">
-                {service.title}
+              <h2 className="font-heading text-deepBlue font-semibold text-xl">
+                {item.title}
               </h2>
               <p className="text-lightGray text-sm mt-2 text-balance">
-                {service.subTitle}
+                {item.subTitle}
               </p>
             </div>
           </div>

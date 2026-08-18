@@ -143,7 +143,7 @@ export default function Hero() {
     <section
       ref={scope}
       aria-label="Hero"
-      className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden"
+      className="sticky top-0 z-0 min-h-svh flex items-center justify-center overflow-hidden"
     >
       <HeroBackground />
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />

@@ -1,5 +1,7 @@
 import HeroScope from "~/components/features/service-scope/hero-scope";
 import Offer from "~/components/features/service-scope/offer";
+import OtherServices from "~/components/features/service-scope/other-services";
+import OurProcess from "~/components/features/service-scope/our-process";
 import Overview from "~/components/features/service-scope/overview";
 import { serviceScope } from "~/lib/constants";
 import { SITE_DESCRIPTION, seoMeta } from "~/lib/seo";
@@ -37,6 +39,8 @@ export default function ServiceScope({params}: Route.ComponentProps) {
       <HeroScope service={service} />
       <Overview service={service} />
       <Offer service={service} />
+      <OurProcess />
+      <OtherServices service={service}/>
     </>
   );
 }

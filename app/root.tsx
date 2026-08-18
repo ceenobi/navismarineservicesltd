@@ -55,8 +55,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <script
               key={data["@type"]}
               type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-            />
+            >
+              {JSON.stringify(data)}
+            </script>
           )
         )}
       </head>

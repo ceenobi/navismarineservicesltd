@@ -56,7 +56,7 @@ export default function HeroServices() {
   return (
     <section ref={scope}
     aria-label="Hero"
-    className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden">
+    className="sticky top-0 z-0 min-h-svh flex items-center justify-center overflow-hidden">
       <div
         data-hero="parallax"
         aria-hidden="true"

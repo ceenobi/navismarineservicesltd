@@ -125,9 +125,15 @@ export default function AboutNavis() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-5 space-y-4">
-            <img
+        <div className="grid grid-cols-12 gap-6 items-center">
+            <div className="col-span-12 md:col-span-5 space-y-4">
+              <h2
+                data-split
+                className="font-heading text-deepBlue font-semibold text-[34px] sm:text-[42px] xl:text-[38px] leading-tight text-balance"
+              >
+                Navigating Excellence Across <span className="text-deepOrange">Maritime Services</span>
+              </h2>
+            {/*<img
               data-reveal
               data-reveal-from="left"
               src="https://res.cloudinary.com/ceenobi/image/upload/q_auto:best/v1786799205/clientproject/navis/ship1_ey3euh.webp"
@@ -137,8 +143,8 @@ export default function AboutNavis() {
               loading="lazy"
               decoding="async"
               className="h-51.25 w-full rounded-2xl"
-            />
-            <img
+            />*/}
+            {/*<img
               data-reveal
               data-reveal-from="left"
               src="https://res.cloudinary.com/ceenobi/image/upload/q_auto:best/v1786799207/clientproject/navis/ship2_cw5iqp.webp"
@@ -148,14 +154,14 @@ export default function AboutNavis() {
               loading="lazy"
               decoding="async"
               className="h-51.25 w-full rounded-2xl"
-            />
+            />*/}
           </div>
           <div className="col-span-12 md:col-span-7">
             <img
               data-reveal
               data-reveal-from="right"
-              src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto:best/v1786799195/clientproject/navis/ship3_yx7s6d.svg"
-              alt="Map of the West African coastline"
+              src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787056170/clientproject/navis/Gemini_Generated_Image_jili9pjili9pjili_zpuicn.jpg"
+              alt="apapa terminal wharf"
               width="773"
               height="442"
               loading="lazy"
