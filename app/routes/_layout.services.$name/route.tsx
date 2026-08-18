@@ -3,8 +3,9 @@ import Offer from "~/components/features/service-scope/offer";
 import OtherServices from "~/components/features/service-scope/other-services";
 import OurProcess from "~/components/features/service-scope/our-process";
 import Overview from "~/components/features/service-scope/overview";
+import FAQ from "~/components/features/service-scope/faq";
 import { serviceScope } from "~/lib/constants";
-import { seoMeta } from "~/lib/seo";
+import { breadcrumbJsonLd, seoMeta, serviceJsonLd } from "~/lib/seo";
 import type { Route } from "./+types/route";
 
 export function meta({ params }: Route.MetaArgs) {
@@ -12,7 +13,7 @@ export function meta({ params }: Route.MetaArgs) {
 
   return seoMeta({
     title: service
-      ? `${service.title} | Navis Marine Services Ltd`
+      ? `${service.title} in Nigeria | Navis Marine Services Ltd`
       : `Service not found | Navis Marine Services Ltd`,
     description:
       service?.subTitle ??
@@ -42,10 +43,36 @@ export default function ServiceScope({params}: Route.ComponentProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            serviceJsonLd({
+              name: `${service.title} in Nigeria`,
+              description: service.subTitle,
+              path: `/services/${service.slug}`,
+              image: service.cover,
+            }),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Services", path: "/services" },
+              { name: service.title, path: `/services/${service.slug}` },
+            ]),
+          ),
+        }}
+      />
       <HeroScope service={service} />
       <Overview service={service} />
       <Offer service={service} />
       <OurProcess />
+      <FAQ slug={service.slug} />
       <OtherServices service={service}/>
     </>
   );

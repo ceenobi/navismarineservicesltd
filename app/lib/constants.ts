@@ -43,26 +43,26 @@ export const services = [
   },
   {
     id: 4,
-    image: "/t3.svg",
+    image: "/sev4.svg",
     title: "Marine Procurement",
     description:
-      "Health, safety, security, environment and quality assurance aligned with ISM, ISPS and industry best practice.",
+      "Reliable sourcing of vessel supplies, equipment, spares and operational essentials through a trusted supplier network.",
     href: "/services/marine-procurement",
   },
   {
     id: 5,
-    image: "/t3.svg",
+    image: "/sev5.svg",
     title: "Marine Logistics",
     description:
-      "Health, safety, security, environment and quality assurance aligned with ISM, ISPS and industry best practice.",
+      "Coordinating cargo, transportation and shore-side logistics around your vessel's schedule.",
     href: "/services/marine-logistics",
   },
   {
     id: 6,
-    image: "/t3.svg",
+    image: "/sev6.svg",
     title: "Executive Concierge",
     description:
-      "Health, safety, security, environment and quality assurance aligned with ISM, ISPS and industry best practice.",
+      "Discreet, responsive support for shipowners, senior executives and maritime professionals in Nigeria.",
     href: "/services/executive-concierge",
   },
 ];
@@ -508,6 +508,116 @@ export const serviceScope: ServiceScope[] = [
     ]
   },
 ]
+
+export type ServiceFaq = {
+  question: string;
+  answer: string;
+};
+
+export const serviceFaqs: Record<string, ServiceFaq[]> = {
+  "ship-agency": [
+    {
+      question: "Where does NAVIS provide ship agency services in Nigeria?",
+      answer:
+        "NAVIS acts as your trusted local representative across Nigerian ports, coordinating vessel arrivals, port operations, documentation, authorities, terminals and departure requirements with disciplined, transparent port call management.",
+    },
+    {
+      question: "What does your port agency service include?",
+      answer:
+        "We cover port and protective agency, husbandry services, crew changes, bunkering coordination, cargo and logistics coordination, and import and export support — keeping shipowners, operators and charterers informed throughout the port stay.",
+    },
+    {
+      question: "How do you minimize vessel delays in port?",
+      answer:
+        "Our team manages documentation, authorities and port coordination proactively, focusing on efficient operations and regulatory compliance to reduce turnaround times and avoid unnecessary delays.",
+    },
+  ],
+  "maritime-consultancy": [
+    {
+      question: "What does NAVIS maritime consultancy cover?",
+      answer:
+        "We provide practical technical, operational and commercial advisory — marine operations advisory, compliance advisory, operational reviews, risk management, project and technical support, and commercial maritime advisory.",
+    },
+    {
+      question: "Who benefits from your consultancy services?",
+      answer:
+        "Shipowners, operators, charterers and offshore industries benefit from our seagoing command experience and international operational knowledge, supporting safer operations, stronger compliance and better commercial decisions.",
+    },
+    {
+      question: "Do you help with operational risk management?",
+      answer:
+        "Yes. We identify, evaluate and reduce operational risks, protecting people, assets and business continuity with recommendations built on real-world maritime expertise.",
+    },
+  ],
+  "hsseq-compliance": [
+    {
+      question: "What HSSEQ services does NAVIS provide?",
+      answer:
+        "We strengthen maritime safety, security, environmental performance and regulatory compliance through ISM safety management, ISPS maritime security, MLC compliance, internal audits, risk assessment, and environmental and quality systems.",
+    },
+    {
+      question: "Do you support ISM and ISPS compliance?",
+      answer:
+        "Yes. We develop and strengthen safety management systems aligned with ISM requirements and support vessel and port security through practical ISPS compliance measures.",
+    },
+    {
+      question: "Can NAVIS conduct internal HSSEQ audits?",
+      answer:
+        "Yes. Our independent audits evaluate compliance and operational performance, identify gaps and recommend practical improvements for continuous improvement.",
+    },
+  ],
+  "marine-procurement": [
+    {
+      question: "What can NAVIS source for vessels?",
+      answer:
+        "We source vessel spares, provisions and bonded stores, deck and engine supplies, safety equipment, and lubricants and consumables through a trusted network of verified suppliers.",
+    },
+    {
+      question: "How do you ensure quality and timely delivery?",
+      answer:
+        "We coordinate sourcing, quality assurance, documentation and delivery with efficiency and transparency, ensuring your operations stay supplied without compromising quality or timelines.",
+    },
+    {
+      question: "Do you deliver to offshore installations?",
+      answer:
+        "Yes. In addition to vessels, we support offshore installations and maritime businesses, coordinating supplier and delivery management from sourcing to fulfillment.",
+    },
+  ],
+  "marine-logistics": [
+    {
+      question: "What does NAVIS marine logistics cover?",
+      answer:
+        "We coordinate cargo movement, inland transportation, terminal operations, customs interfaces, storage support and supply delivery around your vessel's schedule.",
+    },
+    {
+      question: "Do you handle customs documentation?",
+      answer:
+        "Yes. We manage customs communication and documentation for smooth clearance, simplifying regulatory processes for our clients.",
+    },
+    {
+      question: "How do you reduce logistics delays?",
+      answer:
+        "By connecting ports, suppliers and transport providers, we deliver dependable logistics solutions that reduce delays and improve operational visibility.",
+    },
+  ],
+  "executive-concierge": [
+    {
+      question: "Who is the executive concierge service for?",
+      answer:
+        "It is designed for shipowners, senior executives and maritime professionals requiring personalized support while operating in Nigeria.",
+    },
+    {
+      question: "What does the service include?",
+      answer:
+        "We manage executive transportation, accommodation support, airport assistance, meeting logistics and bespoke concierge services with discretion and professionalism.",
+    },
+    {
+      question: "How is the service delivered?",
+      answer:
+        "Every arrangement is tailored to provide a seamless and comfortable experience, delivered with discretion from arrival to departure.",
+    },
+  ],
+};
 
 export const processSteps = [
   {
