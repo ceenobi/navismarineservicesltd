@@ -39,7 +39,7 @@ export default function About() {
         <div data-reveal className="col-span-12 md:col-span-2 text-end">
           <Link to="/services">
             <Button className="bg-deepOrange hover:bg-deepOrange/80 text-mainWhite w-full sm:w-38 py-6 px-6 rounded-full transition-[background-color,opacity] duration-300 ease-in-out">
-              Learn More
+              Explore Our Services
             </Button>
           </Link>
         </div>

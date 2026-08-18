@@ -10,7 +10,7 @@
 
 ## Documentation
 
-- After completing a feature, update `PROGRESS.md` with a summary of what was done and any relevant context (files changed, decisions made, known issues).
+- After completing a feature, update `PROGRESS.md` with a summary of what was done and any relevant context (files changed, decisions made, known issues). Leave the file gitignored.
 - Update the "Recent Accomplishments" section with bullet points for each notable change.
 
 # React Router 7 Project Guidelines
