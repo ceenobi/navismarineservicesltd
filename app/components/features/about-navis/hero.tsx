@@ -67,7 +67,7 @@ export default function Hero() {
         <img
           data-hero="bg"
           src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786968693/clientproject/navis/photo-1605745341112-85968b19335b_uy8oqi.avif"
-          alt="Photo by Jermey Bishop on Unsplash"
+          alt="Jermey Bishop on Unsplash"
           loading="eager"
           fetchPriority="high"
           decoding="async"

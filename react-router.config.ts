@@ -7,6 +7,13 @@ export default {
   ssr: true,
   // Pre-render static routes to HTML at build time for faster responses.
   // The `/contact` route keeps its runtime `action` server for form POSTs.
-  prerender: ["/", "/about", "/contact"],
+  prerender: [
+    "/",
+    "/about",
+    "/contact",
+    "/services",
+    "/services/ship-agency",
+    "/services/maritime-consultancy",
+  ],
   presets: [vercelPreset()],
 } satisfies Config;

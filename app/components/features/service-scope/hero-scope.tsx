@@ -1,7 +1,9 @@
 import { useRef } from "react";
+import { Link } from "react-router";
+import type { ServiceScope } from "~/lib/constants";
 import { gsap, useGSAP } from "~/lib/gsap";
 
-export default function HeroServices() {
+export default function HeroScope({ service }: { service: ServiceScope }) {
   const scope = useRef<HTMLElement>(null);
   useGSAP(
     () => {
@@ -54,35 +56,48 @@ export default function HeroServices() {
     { scope },
   );
   return (
-    <section ref={scope}
-    aria-label="Hero"
-    className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden">
-      <div
-        data-hero="parallax"
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 will-change-transform"
-      >
+    <section
+      ref={scope}
+      aria-label="Hero"
+      className="sticky top-0 z-0 h-svh flex items-center justify-center overflow-hidden">
+    <div
+      data-hero="parallax"
+      aria-hidden="true"
+      className="absolute inset-0 -z-10 will-change-transform"
+    >
         <img
           data-hero="bg"
-          src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786985830/clientproject/navis/photo-1590497008432-598f04441de8_vqol5e.avif"
-          alt="Timelab on Unsplash"
+          src={service.cover}
+          alt={service.title}
+          aria-hidden="true"
           loading="eager"
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 -z-10 w-full h-full object-cover will-change-transform"
         />
-      </div>
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
+    </div>
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#2D3238]/90 via-black/80 to-[#001630] opacity-70" />
       <div className="relative max-w-5xl mx-auto px-4 xl:px-8 py-40 md:py-30 lg:py-20">
-        <div className="text-center space-y-8">
-          <h1
-            data-hero="fade"
-            className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight"
-          >
-            Comprehensive maritime services under one roof.
-          </h1>
-          <p data-hero="fade"
-          className="text-balance text-lg text-softWhite">From vessel agency and port operations to consultancy, HSSEQ, procurement and logistics, NAVIS provides integrated maritime support designed around the operational needs of shipowners, managers, operators, charterers and offshore businesses.</p>
+        <div className="text-start space-y-8">
+          <div className="inline-flex gap-2 items-center">
+            <Link to="/services">
+              <p data-hero="fade" className="hover:text-mainWhite text-balance text-xl text-softWhite">Service /</p></Link>
+            <span data-hero="fade" className="text-deepOrange text-xl">{service.title}</span>
+          </div>
+          <img
+            src={service.logo}
+            alt={service.title}
+            loading="lazy"
+            decoding="async"
+            className="size-13"
+            data-reveal
+            data-reveal-from="left"
+          />
+          <div className="space-y-4">
+            <h1 data-hero="fade"
+              className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title}</h1>
+            <p data-hero="fade" className="text-balance text-xl text-softWhite">{service.subTitle}</p>
+          </div>
         </div>
       </div>
     </section>

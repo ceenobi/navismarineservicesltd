@@ -4,7 +4,7 @@ import { Separator } from "~/components/ui/separator";
 import { useReveal, useSplitWords } from "~/lib/animations";
 import { leadership } from "~/lib/constants";
 import { cn } from "~/lib/utils";
-import NavisWay from "../navis-way";
+import NavisWay from "../../ui/navis-way";
 
 const stats = [
   { value: "16", suffix: "+", label: "Years of maritime experience" },

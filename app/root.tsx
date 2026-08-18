@@ -1,21 +1,21 @@
 import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
+    isRouteErrorResponse,
+    Links,
+    Meta,
+    Outlet,
+    Scripts,
+    ScrollRestoration,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
 import {
-  OG_IMAGE_ABS,
-  SITE_DESCRIPTION,
-  SITE_NAME,
-  organizationJsonLd,
-  professionalServiceJsonLd,
-  websiteJsonLd,
+    OG_IMAGE_ABS,
+    organizationJsonLd,
+    professionalServiceJsonLd,
+    SITE_DESCRIPTION,
+    SITE_NAME,
+    websiteJsonLd,
 } from "./lib/seo";
 
 export const links: Route.LinksFunction = () => [
@@ -51,9 +51,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         {[organizationJsonLd(), websiteJsonLd(), professionalServiceJsonLd()].map(
-          (data, i) => (
+          (data) => (
             <script
-              key={i}
+              key={data["@type"]}
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
             />

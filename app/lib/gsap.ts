@@ -1,5 +1,5 @@
-import { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap/dist/gsap.js";
+import { useEffect, useLayoutEffect } from "react";
 
 export { gsap };
 
@@ -12,7 +12,7 @@ interface UseGSAPConfig {
 }
 
 export function useGSAP(
-  callback: () => void | (() => void),
+  callback: () => (() => void) | undefined,
   config: UseGSAPConfig = {}
 ): void {
   const { scope, dependencies = [] } = config;

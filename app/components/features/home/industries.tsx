@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Badge } from "~/components/ui/badge";
-import { industries } from "~/lib/constants";
 import { useReveal, useSplitWords } from "~/lib/animations";
+import { industries } from "~/lib/constants";
 
 export default function Industries() {
   const scope = useRef<HTMLDivElement>(null);
@@ -32,7 +32,7 @@ export default function Industries() {
           </p>
         </div>
         <div className="flex flex-wrap gap-4 items-center">
-          {industries.map((industry, i) => (
+          {industries.map((industry) => (
             <Badge
               key={industry}
               data-reveal

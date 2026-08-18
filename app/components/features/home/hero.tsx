@@ -1,8 +1,8 @@
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { useRef, useState } from "react";
 import { Link } from "react-router";
-import { gsap, useGSAP } from "~/lib/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { Button } from "~/components/ui/button";
+import { gsap, useGSAP } from "~/lib/gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +30,11 @@ function HeroBackground() {
   };
 
   return (
-    <div data-hero="parallax" aria-hidden="true" className="absolute inset-0 -z-10 will-change-transform">
+    <div
+      data-hero="parallax"
+      aria-hidden="true"
+      className="absolute inset-0 -z-10 will-change-transform"
+    >
       <img
         data-hero="bg"
         src={POSTER_IMAGE}
@@ -45,6 +49,7 @@ function HeroBackground() {
           ref={videoRef}
           data-hero="bg"
           aria-hidden="true"
+          tabIndex={-1}
           className="absolute inset-0 -z-10 h-full w-full object-cover will-change-transform"
           autoPlay
           muted

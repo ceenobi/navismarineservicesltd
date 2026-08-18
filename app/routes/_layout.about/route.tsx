@@ -3,7 +3,7 @@ import Hero from "~/components/features/about-navis/hero";
 import { SITE_DESCRIPTION, seoMeta } from "~/lib/seo";
 import type { Route } from "./+types/route";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_args: Route.MetaArgs) {
   return seoMeta({
     title:
       "About Navis Marine Services Ltd | Ship Agency & Maritime Solutions in Nigeria",
