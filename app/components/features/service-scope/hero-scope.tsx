@@ -95,7 +95,7 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
           />
           <div className="space-y-4 w-full max-w-200">
             <h1 data-hero="fade"
-              className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title}</h1>
+              className="font-heading text-4xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title} in Nigeria</h1>
             <p data-hero="fade" className="text-balance text-xl text-softWhite">{service.subTitle}</p>
           </div>
         </div>

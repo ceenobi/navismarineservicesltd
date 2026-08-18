@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router";
 import HeroServices from "~/components/features/services/hero";
 import ServiceList from "~/components/features/services/service-list";
-import { SERVICES_DESCRIPTION, seoMeta } from "~/lib/seo";
+import { breadcrumbJsonLd, SERVICES_DESCRIPTION, seoMeta } from "~/lib/seo";
 import type { Route } from "./+types/route";
 
 export function meta(_args: Route.MetaArgs) {
@@ -20,6 +20,17 @@ export default function Services() {
     <>
       {isServicePage ?
       <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Services", path: "/services" },
+            ]),
+          ),
+        }}
+      />
       <HeroServices />
       <ServiceList />
        </>

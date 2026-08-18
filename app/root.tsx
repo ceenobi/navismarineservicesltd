@@ -60,6 +60,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </script>
           )
         )}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1XD8JCM8"
+        />
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZJ1XD8JCM8');`}
+        </script>
       </head>
       <body>
         {children}

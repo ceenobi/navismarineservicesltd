@@ -101,7 +101,6 @@ export function organizationJsonLd({ path = "/" }: JsonLdOptions = {}) {
       addressCountry: "NG",
     },
     description: SITE_DESCRIPTION,
-    sameAs: [CONTACT_LINKEDIN],
   };
 }
 
@@ -151,5 +150,50 @@ export function professionalServiceJsonLd() {  return {
         itemOffered: { "@type": "Service", name: "Marine Logistics" },
       },
     ],
+  };
+}
+
+interface ServiceJsonLdOptions {
+  name: string;
+  description: string;
+  path: string;
+  image?: string;
+  areaServed?: string;
+}
+
+export function serviceJsonLd({
+  name,
+  description,
+  path,
+  image,
+  areaServed = "Nigeria",
+}: ServiceJsonLdOptions) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url: absoluteUrl(path),
+    image: image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : OG_IMAGE_ABS,
+    provider: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      email: CONTACT_EMAIL,
+    },
+    areaServed: { "@type": "Country", name: areaServed },
+  };
+}
+
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
+    })),
   };
 }
