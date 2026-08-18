@@ -261,7 +261,7 @@ export const serviceScope: ServiceScope[] = [
         id: 1,
         title: "Marine Operations Advisory",
         subTitle: "Expert guidance to improve vessel performance and operational efficiency. We support informed decision-making across maritime operations.",
-        image:"/services/mar1.svg"
+        image:"/services/mari1.svg"
       },
       {
         id: 2,

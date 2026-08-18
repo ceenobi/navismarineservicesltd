@@ -65,7 +65,7 @@ export default function HeroServices() {
         <img
           data-hero="bg"
           src="https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1786985830/clientproject/navis/photo-1590497008432-598f04441de8_vqol5e.avif"
-          alt="Photo by Timelab on Unsplash"
+          alt="Timelab on Unsplash"
           loading="eager"
           fetchPriority="high"
           decoding="async"

@@ -1,9 +1,9 @@
-import Details from "~/components/features/service-scope/details";
 import HeroScope from "~/components/features/service-scope/hero-scope";
+import Offer from "~/components/features/service-scope/offer";
+import Overview from "~/components/features/service-scope/overview";
 import { serviceScope } from "~/lib/constants";
 import { SITE_DESCRIPTION, seoMeta } from "~/lib/seo";
 import type { Route } from "./+types/route";
-
 
 export function meta({params}: Route.MetaArgs) {
   return seoMeta({
@@ -35,7 +35,8 @@ export default function ServiceScope({params}: Route.ComponentProps) {
   return (
     <>
       <HeroScope service={service} />
-      <Details service={service}/>
+      <Overview service={service} />
+      <Offer service={service} />
     </>
   );
 }
