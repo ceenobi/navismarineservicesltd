@@ -178,7 +178,7 @@ export default function WhyChoose() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
     </div>
   );
 }
