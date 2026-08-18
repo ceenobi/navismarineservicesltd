@@ -2,8 +2,25 @@ import type { MetaDescriptor } from "react-router";
 
 export const SITE_NAME = "Navis Marine Services Ltd";
 export const SITE_URL = "https://navismarineservicesltd.com";
+
+export const CONTACT_EMAIL = "info@navismarineservicesltd.com";
+export const CONTACT_PHONE_DISPLAY = "0123 456 7890";
+export const CONTACT_PHONE_TEL = "tel:+2341234567890";
+export const CONTACT_LINKEDIN = "https://www.linkedin.com/company/navis-marine-services";
 export const SITE_DESCRIPTION =
   "Navis Marine Services Ltd delivers premium Ship Agency, Marine Consultancy, HSSEQ, Marine Procurement and Integrated Maritime Solutions to shipowners, operators, charterers and offshore industries across Nigeria and the global shipping community.";
+
+export const HOME_DESCRIPTION =
+  "Premium ship agency, marine consultancy, HSSEQ, procurement and logistics for shipowners, charterers and offshore industries across Nigeria and beyond.";
+
+export const ABOUT_DESCRIPTION =
+  "Navis Marine Services is a Nigerian maritime company delivering premium ship agency, consultancy, HSSEQ, procurement and logistics with international standards.";
+
+export const SERVICES_DESCRIPTION =
+  "Explore Navis Marine Services: ship agency, marine consultancy, HSSEQ, marine procurement, logistics and executive concierge for the global shipping community.";
+
+export const CONTACT_DESCRIPTION =
+  "Get in touch with Navis Marine Services for ship agency, marine consultancy, HSSEQ, procurement and logistics across Nigeria and global ports.";
 
 export const OG_IMAGE = "/og-image.png";
 export const OG_IMAGE_ABS = `${SITE_URL}${OG_IMAGE}`;
@@ -77,14 +94,14 @@ export function organizationJsonLd({ path = "/" }: JsonLdOptions = {}) {
     name: SITE_NAME,
     url,
     logo: `${SITE_URL}/navislogo.svg`,
-    email: "info@navismarineservicesltd.com",
+    email: CONTACT_EMAIL,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lagos",
       addressCountry: "NG",
     },
     description: SITE_DESCRIPTION,
-    sameAs: [],
+    sameAs: [CONTACT_LINKEDIN],
   };
 }
 
@@ -105,8 +122,8 @@ export function professionalServiceJsonLd() {  return {
     url: SITE_URL,
     image: OG_IMAGE_ABS,
     logo: `${SITE_URL}/navislogo.svg`,
-    email: "info@navismarineservicesltd.com",
-    telephone: "+2341234567890",
+    email: CONTACT_EMAIL,
+    telephone: CONTACT_PHONE_TEL.replace("tel:", ""),
     description: SITE_DESCRIPTION,
     address: {
       "@type": "PostalAddress",

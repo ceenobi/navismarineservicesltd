@@ -17,13 +17,13 @@ export default function Offer({ service }: { service: ServiceScope }) {
         <Badge data-reveal className="bg-paleBlue uppercase text-deepBlue p-4 text-base font-normal">
          what we offer
         </Badge>
-        <h1
+        <h2
           data-split
           className="font-heading text-deepBlue font-semibold text-[34px] sm:text-[42px] xl:text-[38px] text-balance leading-tight"
         >
           Scope of {" "}
           <span className="text-deepOrange">Service</span>
-        </h1>
+        </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
       {service.scope.map((item, index) => (
         <div
@@ -42,9 +42,9 @@ export default function Offer({ service }: { service: ServiceScope }) {
               className="size-13 object-cover rounded-md"
             />
             <div>
-              <h2 className="font-heading text-deepBlue font-semibold text-xl">
+              <h3 className="font-heading text-deepBlue font-semibold text-xl">
                 {item.title}
-              </h2>
+              </h3>
               <p className="text-lightGray text-sm mt-2 text-balance">
                 {item.subTitle}
               </p>

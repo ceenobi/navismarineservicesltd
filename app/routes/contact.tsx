@@ -16,16 +16,15 @@ import { Button } from "~/components/ui/button";
 import { contactEmailTemplate } from "~/components/ui/email-template";
 import Logo from "~/components/ui/logo";
 import { contactSchema } from "~/lib/schema";
-import { SITE_DESCRIPTION, seoMeta } from "~/lib/seo";
+import { CONTACT_DESCRIPTION, seoMeta } from "~/lib/seo";
 import type { Route } from "./+types/contact";
 
 type contactSchemaType = z.infer<typeof contactSchema>;
 
 export function meta(_args: Route.MetaArgs) {
 	return seoMeta({
-		title:
-			"Contact Navis Marine Services Ltd | Ship Agency & Maritime Solutions in Nigeria",
-		description: SITE_DESCRIPTION,
+		title: "Contact Navis Marine Services | Ship Agency in Nigeria",
+		description: CONTACT_DESCRIPTION,
 		path: "/contact",
 	});
 }

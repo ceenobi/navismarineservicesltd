@@ -16,13 +16,13 @@ export default function Industries() {
           industries we serve
         </Badge>
         <div className="space-y-4">
-          <h1
+          <h2
             data-split
             className="font-heading text-deepBlue font-semibold text-[42px] xl:text-[38px] text-balance leading-tight"
           >
             Trusted across the maritime and {" "}
             <span className="text-deepOrange">energy value chain.</span>
-          </h1>
+          </h2>
           <p
             data-reveal
             className="text-lightGray text-lg w-full max-w-187.5"
