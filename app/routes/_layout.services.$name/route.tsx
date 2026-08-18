@@ -4,13 +4,19 @@ import OtherServices from "~/components/features/service-scope/other-services";
 import OurProcess from "~/components/features/service-scope/our-process";
 import Overview from "~/components/features/service-scope/overview";
 import { serviceScope } from "~/lib/constants";
-import { SITE_DESCRIPTION, seoMeta } from "~/lib/seo";
+import { seoMeta } from "~/lib/seo";
 import type { Route } from "./+types/route";
 
-export function meta({params}: Route.MetaArgs) {
+export function meta({ params }: Route.MetaArgs) {
+  const service = serviceScope.find((s) => s.slug === params.name);
+
   return seoMeta({
-    title: `Navis Marine Services Ltd | ${params.name}`,
-    description: SITE_DESCRIPTION,
+    title: service
+      ? `${service.title} | Navis Marine Services Ltd`
+      : `Service not found | Navis Marine Services Ltd`,
+    description:
+      service?.subTitle ??
+      "Navis Marine Services Ltd delivers premium Ship Agency, Marine Consultancy, HSSEQ, Marine Procurement and Integrated Maritime Solutions to shipowners, operators, charterers and offshore industries across Nigeria and the global shipping community.",
     path: `/services/${params.name}`,
   });
 }
