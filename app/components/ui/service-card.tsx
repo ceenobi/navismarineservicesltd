@@ -39,7 +39,7 @@ export function ServiceCard({ service, index }: { service: (typeof services)[num
         prefetch="intent"
         className="group mt-4 inline-flex gap-2 items-center text-deepBlue hover:text-deepOrange transition-colors duration-300 ease-in font-medium"
       >
-        Learn More{" "}
+        Explore {service.title}{" "}
         <RiArrowRightLine
           size={18}
           className="transition-transform duration-300 ease-in group-hover:translate-x-1"
