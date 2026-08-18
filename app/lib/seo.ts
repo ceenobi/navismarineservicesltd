@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
 
 export const OG_IMAGE = "/og-image.png";
 export const OG_IMAGE_ABS = `${SITE_URL}${OG_IMAGE}`;
+export const OG_IMAGE_ALT = "Navis Marine Services Ltd — premium maritime services";
 export const OG_IMAGE_DIMENSIONS = {
   width: 1200,
   height: 630,
@@ -49,6 +50,7 @@ export function seoMeta({
     { property: "og:description", content: description },
     { property: "og:url", content: url },
     { property: "og:image", content: image },
+    { property: "og:image:alt", content: OG_IMAGE_ALT },
     { property: "og:image:width", content: String(OG_IMAGE_DIMENSIONS.width) },
     { property: "og:image:height", content: String(OG_IMAGE_DIMENSIONS.height) },
     { property: "og:locale", content: "en_NG" },
@@ -57,6 +59,8 @@ export function seoMeta({
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: image },
+    { name: "twitter:image:alt", content: OG_IMAGE_ALT },
+    { name: "twitter:url", content: url },
   ];
 }
 
