@@ -61,12 +61,12 @@ export default function NavisWay() {
             </div>
           ))}
         </div>
-        <h1
+        {/*<h1
           data-split
           className="mt-10 font-heading text-deepOrange font-semibold text-3xl sm:text-[34px] text-balance leading-tight"
         >
           Navigating Excellence Across Maritime Services
-        </h1>
+        </h1>*/}
       </div>
     </div>
   );

@@ -34,11 +34,11 @@ export default function Services() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {services.map((service, i) => (
+          {services?.slice(0, 3)?.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
-        </div>
-        <Link to="/services">
+        </div>  
+        <Link to="/services" prefetch="intent">
           <Button
             data-reveal
             className="md:mt-6 bg-deepOrange hover:bg-deepOrange/80 text-mainWhite w-full sm:w-42 py-6 px-6 rounded-full transition-[background-color,opacity] duration-300 ease-in-out"

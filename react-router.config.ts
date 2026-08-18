@@ -1,5 +1,7 @@
 import type { Config } from "@react-router/dev/config";
 import { vercelPreset } from "@vercel/react-router/vite";
+import { type ServiceScope, serviceScope } from "./app/lib/constants";
+
 
 export default {
   // Config options...
@@ -7,13 +9,14 @@ export default {
   ssr: true,
   // Pre-render static routes to HTML at build time for faster responses.
   // The `/contact` route keeps its runtime `action` server for form POSTs.
-  prerender: [
-    "/",
+  //
+  async prerender() {
+    const services = serviceScope.map(
+      (service: ServiceScope) => `/services/${service.slug}`,
+    );
+    return ["/",
     "/about",
-    "/contact",
-    "/services",
-    "/services/ship-agency",
-    "/services/maritime-consultancy",
-  ],
+    "/contact", ...services];
+  },
   presets: [vercelPreset()],
 } satisfies Config;

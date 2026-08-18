@@ -14,7 +14,8 @@ export default function Drawer() {
             <button
               type="button"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-              className="md:hidden relative w-10 h-10 cursor-pointer flex items-center justify-center hover:bg-softWhite rounded-full"
+              className="md:hidden w-10 h-10 cursor-pointer hover:bg-softWhite rounded-full flex items-center justify-center"
+              onClick={() => isOpen ? setIsOpen(false): setIsOpen(true)}
             >
               {isOpen ? <RiCloseLine size={28} /> : <RiMenuFill size={28} />}
             </button>
