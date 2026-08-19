@@ -222,292 +222,525 @@ export type ServiceScope = {
     subTitle: string;
     image: string;
   }[];
+  processSteps: {
+    id: number;
+    title: string;
+    subTitle: string;
+  }[];
 };
 
 export const serviceScope: ServiceScope[] = [
   {
     id: 1,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787000921/clientproject/navis/photo-1670121180583-39ab653a071c_qktzoq.jpg",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787000921/clientproject/navis/photo-1670121180583-39ab653a071c_qktzoq.jpg",
     logo: "/services/anchor1.svg",
     title: "Ship Agency",
     slug: "ship-agency",
-    subTitle: "Full port agency, husbandry and protective agency services with disciplined, transparent port call management.",
-    detail: ["NAVIS acts as your trusted local representative, coordinating vessel arrivals, port operations, documentation, authorities, terminals and departure requirements.", "We keep shipowners, operators and charterers informed while focusing on efficient operations, regulatory compliance and minimizing delays."],
+    subTitle:
+      "Full port agency, husbandry and protective agency services with disciplined, transparent port call management.",
+    detail: [
+      "NAVIS acts as your trusted local representative, coordinating vessel arrivals, port operations, documentation, authorities, terminals and departure requirements.",
+      "We keep shipowners, operators and charterers informed while focusing on efficient operations, regulatory compliance and minimizing delays.",
+    ],
     scope: [
       {
         id: 1,
         title: "Port & Protective Agency",
-        subTitle: "We represent your vessel throughout its port stay. Our team manages documentation, authorities, and port coordination for smooth operations.",
-        image:"/services/agency1.svg"
+        subTitle:
+          "We represent your vessel throughout its port stay. Our team manages documentation, authorities, and port coordination for smooth operations.",
+        image: "/services/agency1.svg",
       },
       {
         id: 2,
         title: "Husbandry Services",
-        subTitle: "Comprehensive support for crew, repairs, and vessel requirements. We ensure every operational need is handled efficiently.",
-        image:"/services/agency2.svg"
+        subTitle:
+          "We provide comprehensive support for crew, repairs, and vessel requirements. Every operational need is handled efficiently, keeping your vessel on schedule.",
+        image: "/services/agency2.svg",
       },
       {
         id: 3,
         title: "Crew Changes",
-        subTitle: "We coordinate seamless crew embarkation and disembarkation. Immigration, transport, and logistics are managed with minimal delays.",
-        image:"/services/agency3.svg"
+        subTitle:
+          "We coordinate seamless crew embarkation and disembarkation. Immigration, transport, and logistics are managed with minimal delays.",
+        image: "/services/agency3.svg",
       },
       {
         id: 4,
         title: "Bunkering Coordination",
-        subTitle: "Safe and timely bunker operations coordinated with trusted suppliers. We prioritize efficiency and operational compliance.",
-        image:"/services/agency4.svg"
+        subTitle:
+          "We coordinate safe and timely bunker operations with trusted suppliers. Efficiency and operational compliance are prioritized at every step.",
+        image: "/services/agency4.svg",
       },
       {
         id: 5,
         title: "Cargo & Logistics Coordination",
-        subTitle: "We synchronize cargo movement and shore-side logistics. Our coordination helps reduce delays and improve turnaround time.",
-        image:"/services/agency5.svg"
+        subTitle:
+          "We synchronize cargo movement and shore-side logistics. Our coordination helps reduce delays and improve turnaround time.",
+        image: "/services/l2.svg",
       },
       {
         id: 6,
         title: "Import & Export Support",
-        subTitle: "We facilitate customs documentation and cargo clearance. Our local expertise ensures compliant import and export processes.",
-        image:"/services/agency6.svg"
+        subTitle:
+          "We facilitate customs documentation and cargo clearance. Our local expertise ensures compliant import and export processes.",
+        image: "/services/agency6.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Vessel Nomination",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Pre-Arrival Planning",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Port Coordination",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Operational Support",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Departure & Reporting",
+      },
+    ],
   },
   {
     id: 2,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787001259/clientproject/navis/image_16_ppdjnj.png",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787001259/clientproject/navis/image_16_ppdjnj.png",
     logo: "/services/ship-wheel.svg",
     title: "Maritime Consultancy",
     slug: "maritime-consultancy",
-    subTitle: "Practical maritime expertise supporting safer operations, stronger compliance and better commercial decisions.",
-    detail: ["Our Maritime Consultancy service provides practical technical, operational, and commercial advisory tailored to the evolving needs of the shipping and offshore industries.", "Backed by extensive international maritime experience, we help clients improve operational performance, strengthen compliance, manage risk, and support strategic decision-making.", "Every recommendation is built on real-world maritime expertise and industry best practice."],
+    subTitle:
+      "Practical maritime expertise supporting safer operations, stronger compliance and better commercial decisions.",
+    detail: [
+      "Our Maritime Consultancy service provides practical technical, operational, and commercial advisory tailored to the evolving needs of the shipping and offshore industries.",
+      "Backed by extensive international maritime experience, we help clients improve operational performance, strengthen compliance, manage risk, and support strategic decision-making.",
+      "Every recommendation is built on real-world maritime expertise and industry best practice.",
+    ],
     scope: [
       {
         id: 1,
         title: "Marine Operations Advisory",
-        subTitle: "Expert guidance to improve vessel performance and operational efficiency. We support informed decision-making across maritime operations.",
-        image:"/services/mari1.svg"
+        subTitle:
+          "Expert guidance to improve vessel performance and operational efficiency. We support informed decision-making across maritime operations.",
+        image: "/services/mari1.svg",
       },
       {
         id: 2,
         title: "Compliance Advisory",
-        subTitle: "We help organizations meet international maritime regulations. Our advice strengthens compliance and operational confidence.",
-        image:"/services/mari2.svg"
+        subTitle:
+          "We help organizations meet international maritime regulations. Our advice strengthens compliance and operational confidence.",
+        image: "/services/mari2.svg",
       },
       {
         id: 3,
         title: "Operational Reviews",
-        subTitle: "We assess existing procedures and identify improvement opportunities. Practical recommendations drive better operational outcomes.",
-        image:"/services/mari3.svg"
+        subTitle:
+          "We assess existing procedures and identify improvement opportunities. Practical recommendations drive better operational outcomes.",
+        image: "/services/mari3.svg",
       },
       {
         id: 4,
         title: "Risk Management",
-        subTitle: "We identify, evaluate, and reduce operational risks. Our approach protects people, assets, and business continuity.",
-        image:"/services/mari4.svg"
+        subTitle:
+          "We identify, evaluate, and reduce operational risks. Our approach protects people, assets, and business continuity.",
+        image: "/services/mari4.svg",
       },
       {
         id: 5,
         title: "Project & Technical Support",
-        subTitle: "Technical expertise for marine projects and specialized operations. We provide dependable support from planning to execution.",
-        image:"/services/mari5.svg"
+        subTitle:
+          "Technical expertise for marine projects and specialized operations. We provide dependable support from planning to execution.",
+        image: "/services/mari5.svg",
       },
       {
         id: 6,
         title: "Commercial Maritime Advisory",
-        subTitle: "Strategic advice for commercial and operational maritime decisions. We help clients maximize value and minimize risk.",
-        image:"/services/mari6.svg"
+        subTitle:
+          "Strategic advice for commercial and operational maritime decisions. We help clients maximize value and minimize risk.",
+        image: "/services/mari6.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Understand",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Assess",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Analyze",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Recommend",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Support",
+      },
+    ],
   },
   {
     id: 3,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787045785/clientproject/navis/photo-1768839719921-6a554fb3e847_snpcok.jpg",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787045785/clientproject/navis/photo-1768839719921-6a554fb3e847_snpcok.jpg",
     logo: "/services/hcheck.svg",
     title: "HSSEQ & Compliance",
     slug: "hsseq-compliance",
-    subTitle: "Strengthening maritime safety, security, environmental performance and regulatory compliance.",
-    detail: ["NAVIS supports organizations in building safer, more compliant maritime operations through effective HSSEQ systems and regulatory advisory.",  "Our practical approach strengthens safety, environmental responsibility, and continuous operational improvement."],
+    subTitle:
+      "Strengthening maritime safety, security, environmental performance and regulatory compliance.",
+    detail: [
+      "NAVIS supports organizations in building safer, more compliant maritime operations through effective HSSEQ systems and regulatory advisory.",
+      "Our practical approach strengthens safety, environmental responsibility, and continuous operational improvement.",
+    ],
     scope: [
       {
         id: 1,
         title: "ISM & Safety Management",
-        subTitle: "We develop and strengthen effective safety management systems. Our solutions align with international ISM requirements.",
-        image:"/services/h2.svg"
+        subTitle:
+          "We develop and strengthen effective safety management systems. Our solutions align with international ISM requirements.",
+        image: "/services/h2.svg",
       },
       {
         id: 2,
         title: "ISPS & Maritime Security",
-        subTitle: "Enhance vessel and port security through practical compliance measures. We support secure and resilient maritime operations.",
-        image:"/services/h3.svg"
+        subTitle:
+          "Enhance vessel and port security through practical compliance measures. We support secure and resilient maritime operations.",
+        image: "/services/h3.svg",
       },
       {
         id: 3,
         title: "MLC Compliance",
-        subTitle: "We help ensure compliance with Maritime Labour Convention standards. Our focus is crew welfare and regulatory readiness.",
-        image:"/services/h4.svg"
+        subTitle:
+          "We help ensure compliance with Maritime Labour Convention standards. Our focus is crew welfare and regulatory readiness.",
+        image: "/services/h4.svg",
       },
       {
         id: 4,
         title: "Internal Audits & Reviews",
-        subTitle: "Independent audits evaluate compliance and operational performance. We identify gaps and recommend practical improvements.",
-        image:"/services/h5.svg"
+        subTitle:
+          "Independent audits evaluate compliance and operational performance. We identify gaps and recommend practical improvements.",
+        image: "/services/h5.svg",
       },
       {
         id: 5,
         title: "Risk Assessment",
-        subTitle: "Comprehensive hazard identification and risk evaluation for maritime activities. We implement effective controls to improve safety.",
-        image:"/services/h6.svg"
+        subTitle:
+          "Comprehensive hazard identification and risk evaluation for maritime activities. We implement effective controls to improve safety.",
+        image: "/services/h6.svg",
       },
       {
         id: 6,
         title: "Environmental & Quality Systems",
-        subTitle: "Promoting sustainable operations through environmental protection and quality management practices.",
-        image:"/services/h7.svg"
+        subTitle:
+          "Promoting sustainable operations through environmental protection and quality management practices.",
+        image: "/services/h7.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Review",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Identify",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Assess",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Improve",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Monitor",
+      },
+    ],
   },
   {
     id: 4,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787046857/clientproject/navis/image_14_qczwrf.png",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787046857/clientproject/navis/image_14_qczwrf.png",
     logo: "/services/p-cart.svg",
     title: "Marine Procurement",
     slug: "marine-procurement",
-    subTitle: "Reliable sourcing of vessel supplies, equipment, spares and operational essentials",
-    detail: ["NAVIS provides reliable procurement solutions for vessels, offshore installations, and maritime businesses through a trusted network of verified suppliers. From technical spare parts and safety equipment to provisions and marine consumables, we coordinate sourcing, quality assurance, documentation, and delivery with efficiency and transparency. Our goal is to keep your operations supplied without compromising quality or timelines."],
+    subTitle:
+      "Reliable sourcing of vessel supplies, equipment, spares and operational essentials",
+    detail: [
+      "NAVIS provides reliable procurement solutions for vessels, offshore installations, and maritime businesses through a trusted network of verified suppliers. From technical spare parts and safety equipment to provisions and marine consumables, we coordinate sourcing, quality assurance, documentation, and delivery with efficiency and transparency. Our goal is to keep your operations supplied without compromising quality or timelines.",
+    ],
     scope: [
       {
         id: 1,
         title: "Vessel Spares",
-        subTitle: "We source genuine spare parts for vessels and marine equipment. Quality and timely delivery are our priority.",
-        image:"/services/p1.svg"
+        subTitle:
+          "We source genuine spare parts for vessels and marine equipment. Quality and timely delivery are our priority.",
+        image: "/services/p1.svg",
       },
       {
         id: 2,
         title: "Provisions & Bonded Stores",
-        subTitle: "Fresh provisions and bonded supplies delivered to support crew welfare. We ensure reliable and efficient supply coordination.",
-        image:"/services/p2.svg"
+        subTitle:
+          "Fresh provisions and bonded supplies delivered to support crew welfare. We ensure reliable and efficient supply coordination.",
+        image: "/services/p2.svg",
       },
       {
         id: 3,
         title: "Deck & Engine Supplies",
-        subTitle: "Essential technical stores supplied for deck and engine operations. Our products meet operational and quality standards.",
-        image:"/services/p3.svg"
+        subTitle:
+          "Essential technical stores supplied for deck and engine operations. Our products meet operational and quality standards.",
+        image: "/services/p3.svg",
       },
       {
         id: 4,
         title: "Safety Equipment",
-        subTitle: "Certified PPE, firefighting, and lifesaving equipment sourced from trusted suppliers. We support safe vessel operations.",
-        image:"/services/p4.svg"
+        subTitle:
+          "Certified PPE, firefighting, and lifesaving equipment sourced from trusted suppliers. We support safe vessel operations.",
+        image: "/services/p4.svg",
       },
       {
         id: 5,
         title: "Lubricants & Consumables",
-        subTitle: "Reliable supply of lubricants, chemicals, and operational consumables. We keep vessels equipped for uninterrupted performance.",
-        image:"/services/p5.svg"
+        subTitle:
+          "Reliable supply of lubricants, chemicals, and operational consumables. We keep vessels equipped for uninterrupted performance.",
+        image: "/services/p5.svg",
       },
       {
         id: 6,
         title: "Supplier & Delivery Management",
-        subTitle: "We coordinate trusted suppliers from sourcing to delivery. Our process ensures transparency and timely fulfillment.",
-        image:"/services/p6.svg"
+        subTitle:
+          "We coordinate trusted suppliers from sourcing to delivery. Our process ensures transparency and timely fulfillment.",
+        image: "/services/p6.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Requirement",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Source",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Evaluate",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Coordinate",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Deliver",
+      },
+    ],
   },
   {
     id: 5,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787047446/clientproject/navis/image_12_oohcxq.png",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787047446/clientproject/navis/image_12_oohcxq.png",
     logo: "/services/package.svg",
     title: "Marine Logistics",
     slug: "marine-logistics",
-    subTitle: "Coordinating cargo, transportation and shore-side logistics around your vessel’s schedule.",
-    detail: ["NAVIS coordinates cargo movement, inland transportation, terminal operations, customs interfaces, and supply delivery to ensure vessels receive the right support at the right time.", "By connecting ports, suppliers, and transport providers, we deliver dependable logistics solutions that reduce delays and improve operational visibility."],
+    subTitle:
+      "Coordinating cargo, transportation and shore-side logistics around your vessel’s schedule.",
+    detail: [
+      "NAVIS coordinates cargo movement, inland transportation, terminal operations, customs interfaces, and supply delivery to ensure vessels receive the right support at the right time.",
+      "By connecting ports, suppliers, and transport providers, we deliver dependable logistics solutions that reduce delays and improve operational visibility.",
+    ],
     scope: [
       {
         id: 1,
         title: "Cargo Coordination",
-        subTitle: "Efficient coordination of cargo movement across ports and terminals. We keep operations aligned with vessel schedules.",
-        image:"/services/l1.svg"
+        subTitle:
+          "Efficient coordination of cargo movement across ports and terminals. We keep operations aligned with vessel schedules.",
+        image: "/services/l1.svg",
       },
       {
         id: 2,
         title: "Inland Transportation",
-        subTitle: "Reliable transportation for cargo, equipment, and marine supplies. We connect ports with inland destinations seamlessly.",
-        image:"/services/l2.svg"
+        subTitle:
+          "Reliable transportation for cargo, equipment, and marine supplies. We connect ports with inland destinations seamlessly.",
+        image: "/services/l2.svg",
       },
       {
         id: 3,
         title: "Terminal Coordination",
-        subTitle: "We liaise with terminals to optimize loading and unloading activities. Our coordination improves vessel turnaround efficiency.",
-        image:"/services/l3.svg"
+        subTitle:
+          "We liaise with terminals to optimize loading and unloading activities. Our coordination improves vessel turnaround efficiency.",
+        image: "/services/l3.svg",
       },
       {
         id: 4,
         title: "Customs Interface",
-        subTitle: "Managing customs communication and documentation for smooth clearance. We simplify regulatory processes for our clients.",
-        image:"/services/l4.svg"
+        subTitle:
+          "Managing customs communication and documentation for smooth clearance. We simplify regulatory processes for our clients.",
+        image: "/services/l4.svg",
       },
       {
         id: 5,
         title: "Storage Support",
-        subTitle: "Secure warehousing and temporary storage for cargo and equipment. Flexible solutions support changing operational needs.",
-        image:"/services/l5.svg"
+        subTitle:
+          "Secure warehousing and temporary storage for cargo and equipment. Flexible solutions support changing operational needs.",
+        image: "/services/l5.svg",
       },
       {
         id: 6,
         title: "Supply Movement",
-        subTitle: "Timely delivery of operational supplies to vessels and offshore locations. We ensure critical materials reach their destination efficiently.",
-        image:"/services/l6.svg"
+        subTitle:
+          "Timely delivery of operational supplies to vessels and offshore locations. We ensure critical materials reach their destination efficiently.",
+        image: "/services/l6.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Plan",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Coordinate",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Move",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Monitor",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Report",
+      },
+    ],
   },
   {
     id: 6,
-    cover:"https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787050819/clientproject/navis/Gemini_Generated_Image_i16jkri16jkri16j_vm02ml.jpg",
+    cover:
+      "https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_auto/v1787050819/clientproject/navis/Gemini_Generated_Image_i16jkri16jkri16j_vm02ml.jpg",
     logo: "/services/concierge-bell.svg",
     title: "Executive Concierge",
     slug: "executive-concierge",
-    subTitle: "Discreet, responsive support for shipowners, senior executives and maritime professionals.",
-    detail: ["Our Executive Concierge service is designed for shipowners, senior executives, and maritime professionals requiring personalized support while operating in Nigeria. We manage transportation, accommodation, airport assistance, meeting logistics, and bespoke concierge services with discretion and professionalism.", "Every arrangement is tailored to provide a seamless and comfortable experience from arrival to departure."],
+    subTitle:
+      "Discreet, responsive support for shipowners, senior executives and maritime professionals.",
+    detail: [
+      "Our Executive Concierge service is designed for shipowners, senior executives, and maritime professionals requiring personalized support while operating in Nigeria. We manage transportation, accommodation, airport assistance, meeting logistics, and bespoke concierge services with discretion and professionalism.",
+      "Every arrangement is tailored to provide a seamless and comfortable experience from arrival to departure.",
+    ],
     scope: [
       {
         id: 1,
         title: "Executive Transportation",
-        subTitle: "Premium transportation tailored for shipowners and senior executives. We provide comfort, reliability, and professionalism.",
-        image:"/services/s1.svg"
+        subTitle:
+          "Premium transportation tailored for shipowners and senior executives. We provide comfort, reliability, and professionalism.",
+        image: "/services/s1.svg",
       },
       {
         id: 2,
         title: "Accommodation Support",
-        subTitle: "We arrange quality hotel reservations to match client schedules. Every stay is planned for convenience and comfort.",
-        image:"/services/s2.svg"
+        subTitle:
+          "We arrange quality hotel reservations to match client schedules. Every stay is planned for convenience and comfort.",
+        image: "/services/s2.svg",
       },
       {
         id: 3,
         title: "Airport Assistance",
-        subTitle: "Meet-and-greet services with seamless airport transfer coordination. We ensure a smooth arrival and departure experience.",
-        image:"/services/s3.svg"
+        subTitle:
+          "Meet-and-greet services with seamless airport transfer coordination. We ensure a smooth arrival and departure experience.",
+        image: "/services/s3.svg",
       },
       {
         id: 4,
         title: "Meeting & Event Support",
-        subTitle: "Professional coordination of business meetings and corporate events. We manage logistics so you can focus on business.",
-        image:"/services/s4.svg"
+        subTitle:
+          "Professional coordination of business meetings and corporate events. We manage logistics so you can focus on business.",
+        image: "/services/s4.svg",
       },
       {
         id: 5,
         title: "Business Assistance",
-        subTitle: "Local executive support for visiting maritime professionals. We help coordinate appointments, travel, and administrative needs.",
-        image:"/services/s5.svg"
+        subTitle:
+          "Local executive support for visiting maritime professionals. We help coordinate appointments, travel, and administrative needs.",
+        image: "/services/s5.svg",
       },
       {
         id: 6,
         title: "Bespoke Concierge Services",
-        subTitle: "Personalized concierge solutions designed around individual requirements. Every service is tailored to deliver a seamless experience.",
-        image:"/services/s6.svg"
+        subTitle:
+          "Personalized concierge solutions designed around individual requirements. Every service is tailored to deliver a seamless experience.",
+        image: "/services/s6.svg",
       },
-    ]
+    ],
+    processSteps: [
+      {
+        id: 1,
+        title: "01",
+        subTitle: "Understand",
+      },
+      {
+        id: 2,
+        title: "02",
+        subTitle: "Plan",
+      },
+      {
+        id: 3,
+        title: "03",
+        subTitle: "Arrange",
+      },
+      {
+        id: 4,
+        title: "04",
+        subTitle: "Support",
+      },
+      {
+        id: 5,
+        title: "05",
+        subTitle: "Follow Through",
+      },
+    ],
   },
-]
+];
 
 export type ServiceFaq = {
   question: string;
@@ -619,30 +852,3 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   ],
 };
 
-export const processSteps = [
-  {
-    id: 1,
-    title: "01",
-    subTitle: "understand",
-  },
-  {
-    id: 2,
-    title: "02",
-    subTitle: "Plan",
-  },
-  {
-    id: 3,
-    title: "03",
-    subTitle: "Arrange",
-  },
-  {
-    id: 4,
-    title: "04",
-    subTitle: "Support",
-  },
-  {
-    id: 5,
-    title: "05",
-    subTitle: "Follow Through",
-  },
-];
