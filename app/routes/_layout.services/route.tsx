@@ -15,7 +15,8 @@ export function meta(_args: Route.MetaArgs) {
 
 export default function Services() {
   const location = useLocation()
-  const isServicePage = location.pathname === "/services";
+  const isServicePage =
+    location.pathname === "/services" || location.pathname === "/services/";
   return (
     <>
       {isServicePage ?
