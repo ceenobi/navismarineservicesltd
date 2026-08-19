@@ -59,12 +59,13 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
     <section
       ref={scope}
       aria-label="Hero"
-      className="sticky top-0 z-0 min-h-svh flex items-center justify-center overflow-hidden">
-    <div
-      data-hero="parallax"
-      aria-hidden="true"
-      className="absolute inset-0 -z-10 will-change-transform"
+      className="sticky top-0 z-0 min-h-svh flex items-center justify-center overflow-hidden"
     >
+      <div
+        data-hero="parallax"
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 will-change-transform"
+      >
         <img
           data-hero="bg"
           src={service.cover}
@@ -75,14 +76,22 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
           decoding="async"
           className="absolute inset-0 -z-10 w-full h-full object-cover will-change-transform"
         />
-    </div>
-        <div className="absolute inset-0 -z-10 bg-linear-to-l from-[#02152D] via-deepBlue to-[#2D3238] opacity-70" />
+      </div>
+      <div className="absolute inset-0 -z-10 bg-linear-to-l from-[#02152D] via-deepBlue to-[#2D3238] opacity-70" />
       <div className="relative max-w-6xl mx-auto px-4 xl:px-8 py-34 md:py-30 lg:py-20">
         <div className="text-start space-y-4">
           <div className="inline-flex gap-2 items-center">
             <Link to="/services">
-              <p data-hero="fade" className="hover:text-mainWhite text-balance text-xl text-softWhite">Service /</p></Link>
-            <span data-hero="fade" className="text-deepOrange text-xl">{service.title}</span>
+              <p
+                data-hero="fade"
+                className="hover:text-mainWhite text-balance text-xl text-softWhite"
+              >
+                Service /
+              </p>
+            </Link>
+            <span data-hero="fade" className="text-deepOrange text-xl">
+              {service.title}
+            </span>
           </div>
           <img
             src={service.logo}
@@ -94,9 +103,15 @@ export default function HeroScope({ service }: { service: ServiceScope }) {
             data-hero="fade"
           />
           <div className="space-y-4 w-full max-w-200">
-            <h1 data-hero="fade"
-              className="font-heading text-3xl sm:text-[54px] font-bold text-mainWhite leading-tight">{service.title} in Nigeria</h1>
-            <p data-hero="fade" className="text-balance text-xl text-softWhite">{service.subTitle}</p>
+            <h1
+              data-hero="fade"
+              className="font-heading text-3xl sm:text-[54px] font-bold text-mainWhite leading-tight"
+            >
+              {service.title}
+            </h1>
+            <p data-hero="fade" className="text-balance text-xl text-softWhite">
+              {service.subTitle}
+            </p>
           </div>
         </div>
       </div>
