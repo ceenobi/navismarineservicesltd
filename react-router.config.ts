@@ -16,6 +16,7 @@ export default {
     );
     return ["/",
     "/about",
+    "/services",
     "/contact", ...services];
   },
   presets: [vercelPreset()],
