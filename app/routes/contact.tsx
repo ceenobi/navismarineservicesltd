@@ -163,8 +163,8 @@ export default function Contact() {
 							aria-live="polite"
 							className={
 								submitResult.success
-									? "text-sm text-deepBlue dark:text-mainWhite"
-									: "text-sm text-destructive"
+									? "bg-green-50 p-4 rounded-xl text-sm text-deepBlue dark:text-mainWhite"
+									: "bg-red-50 p-4 rounded-xl text-sm text-destructive"
 							}
 						>
 							{submitResult.message}
@@ -172,7 +172,7 @@ export default function Contact() {
 					)}
 					<fetcher.Form
 						onSubmit={handleSubmit(onFormSubmit)}
-						className="space-y-3"
+						className="space-y-3 mt-4"
 						noValidate
 					>
 						<div className="space-y-1.5">
