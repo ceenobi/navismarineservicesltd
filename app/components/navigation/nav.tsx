@@ -8,7 +8,7 @@ export default function Nav() {
 	return (
 		<header className="bg-mainWhite z-100 fixed top-2 md:top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-2xl backdrop-blur supports-backdrop-filter:bg-white/90 border border-mainGray/5 shadow-lg rounded-full py-2 px-4">
 			<div className="flex justify-between items-center">
-				<Logo classname="w-30 sm:w-34" />
+				<Logo classname="w-30" />
 				<nav aria-label="Primary" className="hidden md:flex gap-4 items-center">
 					{navLinks.map((link) => (
 						<NavLink
