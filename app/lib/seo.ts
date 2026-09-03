@@ -4,8 +4,8 @@ export const SITE_NAME = "Navis Marine Services Ltd";
 export const SITE_URL = "https://navismarineservicesltd.com";
 
 export const CONTACT_EMAIL = "info@navismarineservicesltd.com";
-export const CONTACT_PHONE_DISPLAY = "0123 456 7890";
-export const CONTACT_PHONE_TEL = "tel:+2341234567890";
+export const CONTACT_PHONE_DISPLAY = "+2349136006703";
+export const CONTACT_PHONE_TEL = "tel:+2349136006703";
 export const CONTACT_LINKEDIN = "https://www.linkedin.com/company/navis-marine-services";
 export const SITE_DESCRIPTION =
   "Navis Marine Services Ltd delivers premium Ship Agency, Marine Consultancy, HSSEQ, Marine Procurement and Integrated Maritime Solutions to shipowners, operators, charterers and offshore industries across Nigeria and the global shipping community.";
