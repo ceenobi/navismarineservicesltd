@@ -85,7 +85,12 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#" className="flex gap-2 items-start">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=2nd+Floor+Canton+Concourse+Building,+12+Landbridge+Avenue,+Oniru,+Victoria+Island,+Lagos,+Nigeria"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-2 items-start"
+              >
                 <img src="/map-pin.svg" alt="map-pin" />
                 <span className="hover:text-mainWhite">2nd Floor Canton Concourse Building, 12 Landbridge Avenue, Oniru, Victoria Island, Lagos, Nigeria</span>
               </a>
